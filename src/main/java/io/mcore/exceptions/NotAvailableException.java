@@ -1,4 +1,4 @@
-package io.magentys.exceptions;
+package io.mcore.exceptions;
 
 /**
  * Created by kostasmamalis on 08/04/16.

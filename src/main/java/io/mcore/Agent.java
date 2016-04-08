@@ -1,15 +1,15 @@
-package io.magentys;
+package io.mcore;
 
-import io.magentys.exceptions.NotAvailableException;
-import io.magentys.utils.Any;
-import io.magentys.utils.Clazz;
+import io.mcore.exceptions.NotAvailableException;
+import io.mcore.utils.Any;
+import io.mcore.utils.Clazz;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Stream;
 
-import static io.magentys.utils.Any.any;
+import static io.mcore.utils.Any.any;
 
 public class Agent {
 
@@ -24,7 +24,7 @@ public class Agent {
         return new Agent(mem);
     }
 
-    public <RESULT> RESULT perform(Mission<RESULT> mission) {
+    public <RESULT> RESULT performs(Mission<RESULT> mission) {
         return mission.accomplishAs(this);
     }
 

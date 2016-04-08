@@ -1,4 +1,4 @@
-package io.magentys.utils;
+package io.mcore.utils;
 
 public class Clazz {
 

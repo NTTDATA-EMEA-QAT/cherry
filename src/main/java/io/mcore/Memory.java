@@ -1,4 +1,4 @@
-package io.magentys;
+package io.mcore;
 
 /**
  * Created by kostasmamalis on 01/04/16.

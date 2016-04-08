@@ -1,9 +1,13 @@
-package io.magentys;
+package io.mcore;
 
 import fj.Unit;
-import io.magentys.exceptions.NotAvailableException;
+import io.mcore.exceptions.NotAvailableException;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
+import static io.mcore.AgentTest.PrintToSysout.printToSysout;
+import static io.mcore.AgentTest.Printer.aPrinter;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsNull.notNullValue;
@@ -28,21 +32,29 @@ public class AgentTest {
     @Test
     public void shouldBeAbleToPerformMissionWithoutResult() throws Exception {
         Agent agent = Journey.anAgent();
-        agent.obtain(new Printer());
-        assertThat(agent.perform(new PrintToSysout("test message")), is(Unit.unit()));
+        agent.obtain(aPrinter());
+        assertThat(agent.performs(printToSysout("test message")), is(Unit.unit()));
     }
 
-    @Test(expected = NotAvailableException.class)
+    @Rule public ExpectedException notAvailableToBeThrown = ExpectedException.none();
+
+    @Test
     public void shouldThrowExceptionIfToolIsNotAvailable() throws Exception {
-        Journey.anAgent().perform(new PrintToSysout("test"));
+        notAvailableToBeThrown.expect(NotAvailableException.class);
+        notAvailableToBeThrown.expectMessage("I don't know this skill: class io.mcore.AgentTest$Printer");
+        Journey.anAgent().performs(new PrintToSysout("test"));
     }
 
-    private class PrintToSysout implements Mission<Unit>{
+    public static class PrintToSysout implements Mission<Unit>{
 
         private final String message;
 
         private PrintToSysout(String message) {
             this.message = message;
+        }
+
+        public static PrintToSysout printToSysout(String message){
+            return new PrintToSysout(message);
         }
 
         @Override
@@ -53,7 +65,11 @@ public class AgentTest {
         }
     }
 
-    private class Printer {
+    public static class Printer {
+
+        public static Printer aPrinter(){
+            return new Printer();
+        }
 
         public void print(String message){
             System.out.println(message);
