@@ -1,12 +1,12 @@
-package io.mcore;
+package io.magentys;
 
-import io.mcore.exceptions.NotAvailableException;
-import io.mcore.utils.Any;
+import io.magentys.exceptions.NotAvailableException;
+import io.magentys.utils.Any;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import static io.mcore.utils.Any.any;
+import static io.magentys.utils.Any.any;
 
 public class CoreMemory implements Memory<String> {
 

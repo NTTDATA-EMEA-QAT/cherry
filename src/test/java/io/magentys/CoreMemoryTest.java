@@ -1,4 +1,4 @@
-package io.mcore;
+package io.magentys;
 
 import org.junit.Test;
 

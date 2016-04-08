@@ -1,4 +1,4 @@
-package io.mcore;
+package io.magentys;
 
 public interface Mission<RESULT> {
 

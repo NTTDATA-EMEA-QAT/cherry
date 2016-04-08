@@ -1,4 +1,4 @@
-package io.mcore.utils;
+package io.magentys.utils;
 
 public class Any<T> {
 

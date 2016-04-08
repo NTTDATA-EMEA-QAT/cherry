@@ -1,15 +1,16 @@
-package io.mcore;
+package io.magentys;
 
-import io.mcore.exceptions.NotAvailableException;
-import io.mcore.utils.Any;
-import io.mcore.utils.Clazz;
+import io.magentys.exceptions.NotAvailableException;
+import io.magentys.utils.Any;
+import io.magentys.utils.Clazz;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Stream;
 
-import static io.mcore.utils.Any.any;
+import static io.magentys.utils.Any.any;
+import static io.magentys.utils.Requires.requires;
 
 public class Agent {
 
@@ -28,13 +29,15 @@ public class Agent {
         return mission.accomplishAs(this);
     }
 
-    public void performAll(Mission... missions) {
-        // require missions not null --> guava
+    public Agent performAll(Mission... missions) {
+        requires(missions != null && missions.length > 0, "No Missions were passed");
         Stream.of(missions).forEach(mission -> mission.accomplishAs(this));
+        return this;
     }
 
-    public <TOOL> void obtain(TOOL... tools) {
+    public <TOOL> Agent obtains(TOOL... tools) {
         Stream.of(tools).forEach(tool -> this.tools.add(any(tool)));
+        return this;
     }
 
     public <TOOL> TOOL usingThe(Class<TOOL> toolClass) {
@@ -50,6 +53,15 @@ public class Agent {
     public <VALUE> VALUE recall(String s, Class<VALUE> clazz) {
         return (VALUE) memory.recall(s, clazz);
     }
+
+    public Agent and(Mission mission){
+        performAll(mission);
+        return this;
+    }
+
+    public Agent andHe(Mission... missions){ return performAll(missions); }
+
+    public Agent andShe(Mission... missions) { return performAll(missions); }
 
 
 }

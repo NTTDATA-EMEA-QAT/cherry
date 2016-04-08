@@ -1,4 +1,4 @@
-package io.mcore.exceptions;
+package io.magentys.exceptions;
 
 /**
  * Created by kostasmamalis on 08/04/16.
@@ -10,6 +10,6 @@ public class NotAvailableException extends RuntimeException {
     }
 
     public NotAvailableException(Class clazz){
-        super("Tool of type: \"" + clazz + "\" not found in agent's toolset... Use agent.obtain(<tool>) method to assign tools to agent.");
+        super("Tool of type: \"" + clazz + "\" not found in agent's toolset... Use agent.obtains(<tool>) method to assign tools to agent.");
     }
 }

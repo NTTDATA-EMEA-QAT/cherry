@@ -1,6 +1,6 @@
-package io.mcore;
+package io.magentys;
 
-import static io.mcore.CoreMemory.coreMemory;
+import static io.magentys.CoreMemory.coreMemory;
 
 public class Journey {
     public static Agent anAgent() {
