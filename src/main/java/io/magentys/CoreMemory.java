@@ -1,21 +1,34 @@
 package io.magentys;
 
-/**
- * Created by kostasmamalis on 01/04/16.
- */
-public class CoreMemory implements Memory {
+import io.magentys.exceptions.NotAvailableException;
+import io.magentys.utils.Any;
+
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
+import static io.magentys.utils.Any.any;
+
+public class CoreMemory implements Memory<String> {
+
+    private Map<String, Any> map = new ConcurrentHashMap<String, Any>();
 
     public static CoreMemory coreMemory(){
         return new CoreMemory();
     }
 
     @Override
-    public <KEY, VALUE> void remember(KEY key, VALUE value) {
-
+    public <VALUE> void remember(String key, VALUE value) {
+         map.put(key, any(value));
     }
 
     @Override
-    public <KEY, VALUE> VALUE recall(KEY key, Class<VALUE> clazz) {
-        return null;
+    public <VALUE> VALUE recall(String key, Class<VALUE> clazz) {
+        Any result = map.get(key);
+        if(result == null) return null;
+        final Object unwrapped = result.get();
+        if (unwrapped.getClass() == clazz) {
+           return (VALUE) unwrapped;
+        }
+        throw new NotAvailableException("Expected value in memory was not of type: " + clazz);
     }
 }

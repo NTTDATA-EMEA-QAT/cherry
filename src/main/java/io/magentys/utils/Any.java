@@ -5,7 +5,7 @@ public class Any<T> {
     private final T t;
 
     public Any(T t){
-        if(t == null) throw new RuntimeException("You passed a null value");
+        if(t == null) throw new RuntimeException("You cannot create 'Any' of a null value");
         this.t = t;
     }
 
@@ -17,7 +17,6 @@ public class Any<T> {
         return t;
     }
 
-
     public boolean equals(Object o){
         if(o == null) return false;
         if(o instanceof Any){
@@ -27,4 +26,6 @@ public class Any<T> {
         }
         else return false;
     }
+
+
 }

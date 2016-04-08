@@ -3,11 +3,11 @@ package io.magentys;
 /**
  * Created by kostasmamalis on 01/04/16.
  */
-public interface Memory {
+public interface Memory<KEY> {
 
-    <KEY, VALUE> void remember(final KEY key, final VALUE value);
+    <VALUE> void remember(final KEY key, final VALUE value);
 
-    <KEY, VALUE> VALUE recall(KEY key, Class<VALUE> clazz);
+    <VALUE> VALUE recall(KEY key, Class<VALUE> clazz);
 
 
 }
