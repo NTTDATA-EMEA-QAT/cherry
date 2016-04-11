@@ -20,8 +20,8 @@ public class AgentTest {
     @Test
     public void shouldHaveAMemory() throws Exception {
         Agent agent = anAgent();
-        agent.remember("test","test1");
-        assertThat(agent.recall("test",String.class), is("test1"));
+        agent.keepsInMind("test", "test1");
+        assertThat(agent.recalls("test", String.class), is("test1"));
     }
 
     @Test
@@ -67,7 +67,7 @@ public class AgentTest {
         @Override
         public Agent accomplishAs(Agent agent) {
             Printer printer = agent.usingThe(Printer.class);
-            printer.print(agent.recall("ScannedDocument", String.class));
+            printer.print(agent.recalls("ScannedDocument", String.class));
             return agent;
         }
     }
@@ -86,7 +86,7 @@ public class AgentTest {
 
         @Override
         public Agent accomplishAs(Agent agent) {
-            agent.remember("ScannedDocument", this.document);
+            agent.keepsInMind("ScannedDocument", this.document);
             return agent;
         }
     }

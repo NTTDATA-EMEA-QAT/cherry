@@ -46,11 +46,11 @@ public class Agent {
         throw new NotAvailableException("I don't know this skill: " + toolClass);
     }
 
-    public <VALUE> void remember(String s, VALUE value) {
+    public <VALUE> void keepsInMind(String s, VALUE value) {
         this.memory.remember(s, value);
     }
 
-    public <VALUE> VALUE recall(String s, Class<VALUE> clazz) {
+    public <VALUE> VALUE recalls(String s, Class<VALUE> clazz) {
         return (VALUE) memory.recall(s, clazz);
     }
 
