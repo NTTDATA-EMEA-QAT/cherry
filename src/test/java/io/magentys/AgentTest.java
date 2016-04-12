@@ -9,7 +9,7 @@ import static io.magentys.AgentTest.Print.printsTheDocument;
 import static io.magentys.AgentTest.Printer.aPrinter;
 import static io.magentys.AgentTest.Scan.scansThe;
 import static io.magentys.AgentTest.Scanner.aScanner;
-import static io.magentys.Journey.anAgent;
+import static io.magentys.AgentProvider.agent;
 import static io.magentys.utils.Sugars.and;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
@@ -19,14 +19,14 @@ public class AgentTest {
 
     @Test
     public void shouldHaveAMemory() throws Exception {
-        Agent agent = anAgent();
+        Agent agent = agent();
         agent.keepsInMind("test", "test1");
         assertThat(agent.recalls("test", String.class), is("test1"));
     }
 
     @Test
     public void shouldUseAnAssignedTool() throws Exception {
-         Agent agent = anAgent();
+         Agent agent = agent();
          agent.obtains(new Printer());
          assertThat(agent.usingThe(Printer.class), notNullValue());
          assertThat(agent.usingThe(Printer.class).getClass().equals(Printer.class), is(true));
@@ -34,7 +34,7 @@ public class AgentTest {
 
     @Test
     public void shouldBeAbleToPerformMissionWithoutResult() throws Exception {
-        Agent agent = anAgent();
+        Agent agent = agent();
         agent.obtains(aPrinter());
         assertThat(agent.performs(printsTheDocument()), is(agent));
     }
@@ -45,12 +45,12 @@ public class AgentTest {
     public void shouldThrowExceptionIfToolIsNotAvailable() throws Exception {
         notAvailableToBeThrown.expect(NotAvailableException.class);
         notAvailableToBeThrown.expectMessage("I don't know this skill: class io.magentys.AgentTest$Printer");
-        anAgent().performs(new Print());
+        agent().performs(new Print());
     }
 
     @Test
     public void shouldAddSyntacticalSugar() throws Exception {
-        Agent Tom = anAgent();
+        Agent Tom = agent();
         Tom.obtains(aPrinter(), and(aScanner()))
                 .andHe( scansThe("important Document"), and(printsTheDocument()));
 

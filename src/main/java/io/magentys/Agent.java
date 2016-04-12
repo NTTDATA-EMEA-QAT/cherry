@@ -6,8 +6,6 @@ import io.magentys.utils.Clazz;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
-import java.util.stream.Stream;
 
 import static io.magentys.utils.Any.any;
 import static io.magentys.utils.Requires.requires;
@@ -17,11 +15,11 @@ public class Agent {
     private final Memory memory;
     private List<Any> tools = new ArrayList<>();
 
-    private Agent(final Memory memory){
+    public Agent(final Memory memory) {
         this.memory = memory;
     }
 
-    public static Agent withMemory(final Memory mem){
+    public static Agent withMemory(final Memory mem) {
         return new Agent(mem);
     }
 
@@ -31,18 +29,27 @@ public class Agent {
 
     public Agent performAll(Mission... missions) {
         requires(missions != null && missions.length > 0, "No Missions were passed");
-        Stream.of(missions).forEach(mission -> mission.accomplishAs(this));
+        for (Mission mission : missions) {
+            mission.accomplishAs(this);
+        }
         return this;
     }
 
     public <TOOL> Agent obtains(TOOL... tools) {
-        Stream.of(tools).forEach(tool -> this.tools.add(any(tool)));
+        for (TOOL tool : tools) {
+            this.tools.add(any(tool));
+        }
         return this;
     }
 
     public <TOOL> TOOL usingThe(Class<TOOL> toolClass) {
-        Optional<Any> result = tools.stream().filter(tool -> Clazz.isClassOrSubclass(toolClass, tool.get().getClass())).findFirst();
-        if(result.isPresent()) return (TOOL) result.get().get();
+
+        for (Any tool : tools) {
+            if (Clazz.isClassOrSubclass(toolClass, tool.get().getClass())) {
+                return (TOOL) tool.get();
+            }
+        }
+
         throw new NotAvailableException("I don't know this skill: " + toolClass);
     }
 
@@ -54,14 +61,18 @@ public class Agent {
         return (VALUE) memory.recall(s, clazz);
     }
 
-    public Agent and(Mission mission){
+    public Agent and(Mission mission) {
         performAll(mission);
         return this;
     }
 
-    public Agent andHe(Mission... missions){ return performAll(missions); }
+    public Agent andHe(Mission... missions) {
+        return performAll(missions);
+    }
 
-    public Agent andShe(Mission... missions) { return performAll(missions); }
+    public Agent andShe(Mission... missions) {
+        return performAll(missions);
+    }
 
 
 }
