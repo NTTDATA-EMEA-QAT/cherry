@@ -51,7 +51,7 @@
 
           <ul class="nav-menu">
             <li><a class="active" href="index.html">Overview</a></li>
-            <li><a href="#">Installation &amp; Usage</a></li>
+            <li><a href="install_and_use.html">Installation &amp; Usage</a></li>
             <li><a href="https://github.com/MagenTys/cherry">Github</a></li>
             <li><a href="https://github.com/MagenTys/cherry/compare?expand=1">Contribute!</a></li>
             <!-- <li>
@@ -134,14 +134,83 @@
 
           <h4>Use</h4>
 
-          <p>You can use the default <code>Agent</code> by means of the static constructor: <code>AgentProvider.agent()</code> to start playing around with Agents.</p>
+          
+
+<h5>Steps:</h5>
+
+<p>1. Import statically in your class:</p>
+
+        <pre class="line-numbers"><code class="language-markup">import static io.magentys.AgentProvider.agent;</code></pre>
+
+<p>2. Create an Agent (e.g. in your <code>@Before</code> of your tests)</p>
+    
+        <pre class="line-numbers"><code class="language-markup">Agent agent = agent();</code></pre>
+        
+<p>3. Assign tools (objects of any type e.g. WebDriver, dbClient etc.):</p>
+        
+        <pre class="line-numbers"><code class="language-markup">agent.obtains(webDriver, dbClient);</code></pre>
+        
+<p>4. Store values (objects of any type) to his memory using a unique id (String):</p>     
+  
+        <pre class="line-numbers"><code class="language-markup">agent.keepInMind("unique.key", new MyWonderfulType());</code></pre>
+        
+<p>    and retrieve them : </p>
+        
+        <pre class="line-numbers"><code class="language-markup">MyWonderfulType myType = agent.recalls("unique.key", MyWonderfulType.class);</code></pre>
+        
+<p>5. Create a Mission with a result:</p>
 
 <pre class="line-numbers"><code class="language-markup">
-     Agent agent = AgentProvider.agent();
+            Mission&lt;String&gt; retrievalOfUsername = new Mission&lt;String&gt;() {
+            
+                @Override
+                public String accomplishAs(Agent agent) {
+                    WebDriver webDriver = agent.using(WebDriver.class);
+                    String visibleText = webDriver.findElement(By.cssSelector("#username").getText();
+                    return visibleText;
+                }
+            }
+            </code></pre>
+        
+    <p>and perform as follows:</p>
+    
+           <pre class="line-numbers"><code class="language-markup">String username = agent.performs(retrievalOfUsername);</code></pre>
+           
+<p>6. You can perform Missions without a result:</p>
 
+<pre class="line-numbers"><code class="language-markup">
+     
+            Mission&lt;Agent&gt; importantMission = new Mission&lt;Agent&gt;() {
+            
+                @Override
+                public Agent accomplishAs(Agent agent) {
+                    /*
+                       you code goes here
+                    */
+                    return agent;
+                }
+            }   
+            </code></pre>      
+     
+     
+     <p>In that way you can chain actions together:</p>
 
-</code></pre>
+     <pre class="line-numbers"><code class="language-markup">
+          
+          Agent salesPerson = agent().obtains(sshClient, restfulClient, webDriver, dbClient);
+          
+          agent.performs(sshAuthentication, restfulAuthentication, webAuthentication, dbAuthentication); // all of them are missions
+          
+          // or
+          
+          Agent Tom = agent();
+                  Tom.obtains(aPrinter(), and(aScanner()))
+                          .andHe( scansThe("important Document"), and(printsTheDocument()));
+
+                          </code></pre>
         </div>
+
+        <h5>For more details please checkout our <a href="install_and_use.html">Installation &amp; Usage</a> Section!</h5>
       </section>
       <!-- END Section - Starter template -->
 
