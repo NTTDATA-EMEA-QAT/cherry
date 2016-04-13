@@ -8,6 +8,13 @@
 
     <name>cherry</name>
     <url>http://maven.apache.org</url>
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
     <description>A syntactical sugar project for BDD oriented tests</description>
 
