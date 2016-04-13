@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <title>TheGuide - CSS</title>
+
+    <!-- Styles -->
+    <link href="assets/css/app.min.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,500,600,800%7COpen+Sans:300,400,500,600,700,800%7CMontserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" href="assets/img/favicon.ico">
+  </head>
+
+  <body class="sticky-nav">
+
+    <!-- Navigation -->
+    <nav class="page-navigation full-topbar">
+      <ul class="nav">
+        <li><a href="#sec-typography">Typography</a></li>
+        <li><a href="#sec-sections">Sections</a></li>
+        <li><a href="#sec-tables">Tables</a></li>
+        <li><a href="#sec-buttons">Buttons</a></li>
+        <li><a href="#sec-labels">Labels</a></li>
+        <li><a href="#sec-images">Images</a></li>
+        <li><a href="#sec-helper">Helper classes</a></li>
+      </ul>
+    </nav>
+    <!-- END Navigation -->
+
+
+    <!-- Site header -->
+    <header class="site-header">
+
+      <!-- Logo & Navigation -->
+      <nav class="site-navigation">
+        <div class="container-fluid">
+          <div class="logo">
+            <a class="logo-default" href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
+            <a class="logo-transparent" href="index.html"><img src="assets/img/logo-alt.png" alt="logo"></a>
+          </div>
+
+          <a class="navbar-toggle" href="#" data-toggle="offcanvas"><i class="fa fa-bars"></i></a>
+
+          <ul class="nav-menu">
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="getting-started.html">Getting Started</a></li>
+            <li><a class="active" href="css.html">CSS</a></li>
+            <li><a href="components.html">Components</a></li>
+            <li>
+              <a href="#">Pages</a>
+              <ul>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="changelog.html">Changelog</a></li>
+                <li><a href="tutorial-1.html">Tutorial - 1</a></li>
+                <li><a href="tutorial-2.html">Tutorial - 2</a></li>
+                <li><a href="tutorial-3.html">Tutorial - 3</a></li>
+              </ul>
+            </li>
+            <li><a class="menu-highlighted" href="http://themeforest.net/item/theguide-online-documentation-template/14239305">Buy Now</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- END Logo & Navigation -->
+
+      <!-- Header image -->
+      <div class="header-image bg-blue no-overlay no-padding">
+        <div class="container">
+          <br><br>
+          <h1><strong>CSS,</strong> Basic styling</h1>
+          <h4>Global CSS settings, fundamental HTML elements, and most reuse-able elements are styled and enhanced with extensible classes.</h4>
+          <br><br>
+        </div>
+      </div>
+      <!-- END Header image -->
+
+    </header>
+    <!-- END Site header -->
+
+
+    <!-- Main container -->
+    <main>
+
+      <!-- Section - Typography -->
+      <section id="sec-typography">
+        <div class="container">
+          <header class="section-header">
+            <span>Writing power</span>
+            <h2>Typography</h2>
+            <p>Use the following tags and classes to write a better documentation.</p>
+          </header>
+
+          <h3>Headings</h3>
+          <p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>, are available.</p>
+          <div class="code-splitted">
+            <div class="code-group col-md-7">
+<pre class="line-numbers"><code class="language-markup">
+&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;
+</code></pre>
+            </div>
+
+            <div class="code-preview col-md-5">
+              <h1>Heading 1</h1>
+              <h2>Heading 2</h2>
+              <h3>Heading 3</h3>
+              <h4>Heading 4</h4>
+              <h5>Heading 5</h5>
+              <h6>Heading 6</h6>
+            </div>
+          </div>
+
+          <p>Create lighter, secondary text in any heading with a generic <code>&lt;small&gt;</code> tag or the <code>.small</code> class.</p>
+
+          <div class="code-splitted">
+            <div class="code-group col-md-7">
+<pre class="line-numbers"><code class="language-markup">
+&lt;h1&gt;Heading 1 &lt;small&gt;Small text&lt;/small&gt;&lt;/h1&gt;
+&lt;h2&gt;Heading 2 &lt;small&gt;Small text&lt;/small&gt;&lt;/h2&gt;
+&lt;h3&gt;Heading 3 &lt;small&gt;Small text&lt;/small&gt;&lt;/h3&gt;
+&lt;h4&gt;Heading 4 &lt;small&gt;Small text&lt;/small&gt;&lt;/h4&gt;
+&lt;h5&gt;Heading 5 &lt;small&gt;Small text&lt;/small&gt;&lt;/h5&gt;
+&lt;h6&gt;Heading 6 &lt;small&gt;Small text&lt;/small&gt;&lt;/h6&gt;
+</code></pre>
+            </div>
+
+            <div class="code-preview col-md-5">
+              <h1>Heading 1 <small>Small text</small></h1>
+              <h2>Heading 2 <small>Small text</small></h2>
+              <h3>Heading 3 <small>Small text</small></h3>
+              <h4>Heading 4 <small>Small text</small></h4>
+              <h5>Heading 5 <small>Small text</small></h5>
+              <h6>Heading 6 <small>Small text</small></h6>
+            </div>
+          </div>
+
+          <h3>Text colors</h3>
+          <p>Use follwoing contextual classes to change color of your text.</p>
+          <div class="code-splitted">
+            <div class="code-group col-md-7">
+<pre class="line-numbers"><code class="language-markup">
+&lt;p&gt;This is a normal paragraph without any contectual classes.&lt;/p&gt;
+&lt;p class=&quot;txt-purple&quot;&gt;A paragraph with .txt-purple class.&lt;/p&gt;
+&lt;p class=&quot;txt-green&quot;&gt;A paragraph with .txt-green class.&lt;/p&gt;
+&lt;p class=&quot;txt-blue&quot;&gt;A paragraph with .txt-blue class.&lt;/p&gt;
+&lt;p class=&quot;txt-red&quot;&gt;A paragraph with .txt-red class.&lt;/p&gt;
+&lt;p class=&quot;txt-orange&quot;&gt;A paragraph with .txt-orange class.&lt;/p&gt;
+&lt;p class=&quot;txt-dark&quot;&gt;A paragraph with .txt-dark class.&lt;/p&gt;
+&lt;p class=&quot;txt-gray&quot;&gt;A paragraph with .txt-gray class.&lt;/p&gt;
+&lt;p class=&quot;txt-white bg-dark&quot;&gt;A paragraph with .txt-white and .bg-dark class.&lt;/p&gt;
+</code></pre>
+            </div>
+
+            <div class="code-preview col-md-5">
+              <p>This is a normal paragraph without any contectual classes.</p>
+              <p class="txt-purple">A paragraph with .txt-purple class.</p>
+              <p class="txt-green">A paragraph with .txt-green class.</p>
+              <p class="txt-blue">A paragraph with .txt-blue class.</p>
+              <p class="txt-red">A paragraph with .txt-red class.</p>
+              <p class="txt-orange">A paragraph with .txt-orange class.</p>
+              <p class="txt-dark">A paragraph with .txt-dark class.</p>
+              <p class="txt-gray">A paragraph with .txt-gray class.</p>
+              <p class="txt-white bg-dark">A paragraph with .txt-white and .bg-dark class.</p>
+            </div>
+          </div>
+
+          <h3>Background colors</h3>
+          <p>Use follwoing contextual classes to change background color of your text.</p>
+          <div class="code-splitted">
+            <div class="code-group col-md-7">
+<pre class="line-numbers"><code class="language-markup">
+&lt;p&gt;This is a normal paragraph without any contectual classes.&lt;/p&gt;
+&lt;p class=&quot;bg-purple&quot;&gt;A paragraph with .bg-purple class.&lt;/p&gt;
+&lt;p class=&quot;bg-green&quot;&gt;A paragraph with .bg-green class.&lt;/p&gt;
+&lt;p class=&quot;bg-blue&quot;&gt;A paragraph with .bg-blue class.&lt;/p&gt;
+&lt;p class=&quot;bg-orange&quot;&gt;A paragraph with .bg-orange class.&lt;/p&gt;
+&lt;p class=&quot;bg-red&quot;&gt;A paragraph with .bg-red class.&lt;/p&gt;
+&lt;p class=&quot;bg-dark&quot;&gt;A paragraph with .bg-dark class.&lt;/p&gt;
+&lt;p class=&quot;bg-dark-light&quot;&gt;A paragraph with .bg-dark-light class.&lt;/p&gt;
+&lt;p class=&quot;bg-dark-lighter&quot;&gt;A paragraph with .bg-dark-lighter class.&lt;/p&gt;
+&lt;p class=&quot;bg-dark-lightest&quot;&gt;A paragraph with .bg-dark-lightest class.&lt;/p&gt;
+&lt;p class=&quot;bg-gray&quot;&gt;A paragraph with .bg-gray class.&lt;/p&gt;
+&lt;p class=&quot;bg-gray-light&quot;&gt;A paragraph with .bg-gray-light class.&lt;/p&gt;
+&lt;p class=&quot;bg-gray-lighter&quot;&gt;A paragraph with .bg-gray-lighter class.&lt;/p&gt;
+&lt;p class=&quot;bg-gray-lightest&quot;&gt;A paragraph with .bg-gray-lightest class.&lt;/p&gt;
+&lt;p class=&quot;bg-white&quot;&gt;A paragraph with .bg-white class.&lt;/p&gt;
+</code></pre>
+            </div>
+
+            <div class="code-preview col-md-5">
+              <p>This is a normal paragraph without any contectual classes.</p>
+              <p class="bg-purple">A paragraph with .bg-purple class.</p>
+              <p class="bg-green">A paragraph with .bg-green class.</p>
+              <p class="bg-blue">A paragraph with .bg-blue class.</p>
+              <p class="bg-orange">A paragraph with .bg-orange class.</p>
+              <p class="bg-red">A paragraph with .bg-red class.</p>
+              <p class="bg-dark">A paragraph with .bg-dark class.</p>
+              <p class="bg-dark-light">A paragraph with .bg-dark-light class.</p>
+              <p class="bg-dark-lighter">A paragraph with .bg-dark-lighter class.</p>
+              <p class="bg-dark-lightest">A paragraph with .bg-dark-lightest class.</p>
+              <p class="bg-gray">A paragraph with .bg-gray class.</p>
+              <p class="bg-gray-light">A paragraph with .bg-gray-light class.</p>
+              <p class="bg-gray-lighter">A paragraph with .bg-gray-lighter class.</p>
+              <p class="bg-gray-lightest">A paragraph with .bg-gray-lightest class.</p>
+              <p class="bg-white">A paragraph with .bg-white class.</p>
+            </div>
+          </div>
+
+
+          <h3>Mark</h3>
+          <p>Use <code>&lt;mark&gt;</code> tag or <code>.highlight</code> class to highlight a text.</p>
+          <div class="code-splitted">
+            <div class="code-group col-md-7">
+<pre class="line-numbers"><code class="language-markup">
+&lt;p&gt;A sample of &lt;mark&gt;marked&lt;/mark&gt; text.&lt;/p&gt;
+&lt;p&gt;A sample of &lt;span class=&quot;highlight&quot;&gt;highlighted&lt;/span&gt; text.&lt;/p&gt;
+</code></pre>
+            </div>
+
+            <div class="code-preview col-md-5">
+              <p>A sample of <mark>marked</mark> text.</p>
+              <p>A sample of <span class="highlight">highlighted</span> text.</p>
+            </div>
+          </div>
+
+
+          <h3>Small & lead</h3>
+          <p>Use <code>&lt;small&gt;</code> tag or <code>.small</code> class to make a paragraph smaller, or make a paragraph stand out by adding <code>.lead</code> class.</p>
+
+          <div class="code-splitted">
+            <div class="code-group col-md-7">
+<pre class="line-numbers"><code class="language-markup">
+&lt;p class=&quot;lead&quot;&gt;A sample lead paragraph.&lt;/p&gt;
+&lt;p&gt;A normal paragraph.&lt;/p&gt;
+&lt;p class=&quot;small&quot;&gt;A sample small paragraph.&lt;/p&gt;
+</code></pre>
+            </div>
+
+            <div class="code-preview col-md-5">
+              <p class="lead">A sample lead paragraph.</p>
+              <p>A normal paragraph.</p>
+              <p class="small">A sample small paragraph.</p>
+            </div>
+          </div>
+
+
+          <h3>Blockquotes</h3>
+          <p>Wrap <code>&lt;blockquote&gt;</code> around any HTML as the quote. For straight quotes, we recommend a <code>&lt;p&gt;</code>.</p>
+          <div class="code-snippet">
+            <div class="code-preview">
+              <blockquote>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+              </blockquote>
+            </div>
+
+<pre class="line-numbers no-name"><code class="language-markup">
+&lt;blockquote&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
+&lt;/blockquote&gt;
+</code></pre>
+          </div>
+
+          <h4>Naming a source</h4>
+          <p>Add a <code>&lt;footer&gt;</code> for identifying the source. Wrap the name of the source work in <code>&lt;cite&gt;</code>.</p>
+          <div class="code-snippet">
+            <div class="code-preview">
+              <blockquote>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+              </blockquote>
+            </div>
+
+<pre class="line-numbers no-name"><code class="language-markup">
+&lt;blockquote&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
+  &lt;footer&gt;Someone famous in &lt;cite title=&quot;Source Title&quot;&gt;Source Title&lt;/cite&gt;&lt;/footer&gt;
+&lt;/blockquote&gt;
+</code></pre>
+          </div>
+
+
+          <h3>Text columns</h3>
+          <p>Divide your paragraph to several columns using <code>.text-cols-2</code>, <code>.text-cols-3</code>, and <code>.text-cols-4</code> classes.</p>
+          <div class="code-snippet">
+<pre class="line-numbers no-copy"><code class="language-markup">
+&lt;p class=&quot;text-cols-2&quot;&gt;...&lt;/p&gt;
+&lt;p class=&quot;text-cols-3&quot;&gt;...&lt;/p&gt;
+&lt;p class=&quot;text-cols-4&quot;&gt;...&lt;/p&gt;
+</code></pre>
+            <div class="code-preview">
+              <p class="text-cols-2">Etiam efficitur bibendum nibh ut ultricies. Nulla luctus erat in risus tincidunt eleifend. Proin ornare mollis quam vitae faucibus. Suspendisse nisi lorem, venenatis vitae ligula et, tempor blandit nunc. Mauris eleifend sodales mauris, at rutrum diam. Duis sed odio molestie felis euismod rutrum placerat vitae risus. Cras lectus massa, ultricies at dui ac, commodo pulvinar velit. Fusce ultrices sem felis, vitae sodales justo tempus in. Etiam et sodales augue, a efficitur nibh. Vestibulum augue purus, rhoncus vitae enim a, ultrices gravida justo. Nunc mollis nibh ac arcu placerat, at sagittis libero sollicitudin. Etiam suscipit, magna non eleifend ornare, dui libero congue dui, id ultricies lacus ante vitae erat. Aliquam sollicitudin sem a est tempor, nec vehicula ipsum tempor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque ac risus ac arcu laoreet feugiat a sit amet libero. Aenean luctus, nisi ut tincidunt semper, purus sapien fringilla quam, a ultrices arcu dolor sed neque.</p>
+              <br>
+              <p class="text-cols-3">Etiam efficitur bibendum nibh ut ultricies. Nulla luctus erat in risus tincidunt eleifend. Proin ornare mollis quam vitae faucibus. Suspendisse nisi lorem, venenatis vitae ligula et, tempor blandit nunc. Mauris eleifend sodales mauris, at rutrum diam. Duis sed odio molestie felis euismod rutrum placerat vitae risus. Cras lectus massa, ultricies at dui ac, commodo pulvinar velit. Fusce ultrices sem felis, vitae sodales justo tempus in. Etiam et sodales augue, a efficitur nibh. Vestibulum augue purus, rhoncus vitae enim a, ultrices gravida justo. Nunc mollis nibh ac arcu placerat, at sagittis libero sollicitudin. Etiam suscipit, magna non eleifend ornare, dui libero congue dui, id ultricies lacus ante vitae erat. Aliquam sollicitudin sem a est tempor, nec vehicula ipsum tempor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque ac risus ac arcu laoreet feugiat a sit amet libero. Aenean luctus, nisi ut tincidunt semper, purus sapien fringilla quam, a ultrices arcu dolor sed neque.</p>
+              <br>
+              <p class="text-cols-4">Etiam efficitur bibendum nibh ut ultricies. Nulla luctus erat in risus tincidunt eleifend. Proin ornare mollis quam vitae faucibus. Suspendisse nisi lorem, venenatis vitae ligula et, tempor blandit nunc. Mauris eleifend sodales mauris, at rutrum diam. Duis sed odio molestie felis euismod rutrum placerat vitae risus. Cras lectus massa, ultricies at dui ac, commodo pulvinar velit. Fusce ultrices sem felis, vitae sodales justo tempus in. Etiam et sodales augue, a efficitur nibh. Vestibulum augue purus, rhoncus vitae enim a, ultrices gravida justo. Nunc mollis nibh ac arcu placerat, at sagittis libero sollicitudin. Etiam suscipit, magna non eleifend ornare, dui libero congue dui, id ultricies lacus ante vitae erat. Aliquam sollicitudin sem a est tempor, nec vehicula ipsum tempor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque ac risus ac arcu laoreet feugiat a sit amet libero. Aenean luctus, nisi ut tincidunt semper, purus sapien fringilla quam, a ultrices arcu dolor sed neque.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <!-- END Section - Typography -->
+
+
+      <!-- Section - Sections -->
+      <section id="sec-sections">
+        <div class="container">
+          <header class="section-header">
+            <span>Content decoupling</span>
+            <h2>Sections</h2>
+            <p>Split your documentation page to different parts and describe each of those inside a section tag.</p>
+          </header>
+
+          <h3>Header</h3>
+          <p>You can see sample header almost in every section of this documentation. The header of this section uses following code:</p>
+<pre class="line-numbers"><code class="language-markup">
+&lt;header class=&quot;section-header&quot;&gt;
+  &lt;span&gt;Content decoupling&lt;/span&gt;
+  &lt;h2&gt;Sections&lt;/h2&gt;
+  &lt;p&gt;Split your documentation page to different parts and describe each of those inside a section tag.&lt;/p&gt;
+&lt;/header&gt;
+</code></pre>
+
+          <h4>Alignment</h4>
+          <p>By default, the header is center aligned. But you can easily change the text alignment by using <code>.text-left</code> or <code>.text-right</code> with header tag.</p>
+          <div class="code-snippet">
+            <div class="code-preview">
+              <header class="section-header text-left">
+                <span>Content decoupling</span>
+                <h2>Sections</h2>
+                <p>Split your documentation page to different parts and describe each of those inside a section tag.</p>
+              </header>
+            </div>
+
+<pre class="line-numbers no-name"><code class="language-markup">
+&lt;header class=&quot;section-header text-left&quot;&gt;
+  &lt;span&gt;Content decoupling&lt;/span&gt;
+  &lt;h2&gt;Sections&lt;/h2&gt;
+  &lt;p&gt;Split your documentation page to different parts and describe each of those inside a section tag.&lt;/p&gt;
+&lt;/header&gt;
+</code></pre>
+          </div>
+
+
+          <h3 id="sec-sections-bg">Background</h3>
+          <p>You have a plenty of option to modify background of a section.</p>
+
+          <h4>Color</h4>
+          <p>By default, background-color is white, but you can use following classes with a <code>section</code> tag to modify its background-color.</p>
+
+<pre class="simple-view no-copy"><code class="language-markup">
+&lt;section class=&quot;bg-gray-light&quot;&gt;
+  ...
+&lt;/section&gt;
+</code></pre>
+
+          <ul class="color-palette-circular">
+            <li class="bg-purple">.bg-purple</li>
+            <li class="bg-green">.bg-green</li>
+            <li class="bg-blue">.bg-blue</li>
+            <li class="bg-orange">.bg-orange</li>
+            <li class="bg-red">.bg-red</li>
+            <li class="bg-dark">.bg-dark</li>
+            <li class="bg-dark-light">.bg-dark-light</li>
+            <li class="bg-dark-lighter">.bg-dark-lighter</li>
+            <li class="bg-dark-lightest">.bg-dark-lightest</li>
+            <li class="bg-gray txt-gray">.bg-gray</li>
+            <li class="bg-gray-light txt-gray">.bg-gray-light</li>
+            <li class="bg-gray-lighter txt-gray">.bg-gray-lighter</li>
+            <li class="bg-gray-lightest txt-gray">.bg-gray-lightest</li>
+          </ul>
+
+          <p>Also, you can always change background-color using inline style:</p>
+<pre class="simple-view no-copy"><code class="language-markup">
+&lt;section style=&quot;background-color: #123456&quot;&gt;
+  ...
+&lt;/section&gt;
+</code></pre>
+
+          <h4>Image</h4>
+          <p>Easily add a background-image to a section using inline style:</p>
+<pre class="simple-view no-copy"><code class="language-markup">
+&lt;section style=&quot;background-image: url(path/to/image.png)&quot;&gt;
+  ...
+&lt;/section&gt;
+</code></pre>
+          
+          <p>Or take advantage of your <code>assets/css/custom.css</code> file and make a class for each background-image:</p>
+          <div class="code-snippet">
+<pre class="line-numbers no-copy"><code class="language-css">
+.bg-img-sec-about {
+  background-image: url(../img/bg-about.png);
+}
+</code></pre>
+<pre class="line-numbers no-copy"><code class="language-markup">
+&lt;section class=&quot;bg-img-sec-about&quot;&gt;
+  ...
+&lt;/section&gt;
+</code></pre>
+          </div>
+
+
+          <h4>Video</h4>
+          <p>You can easily add a video to background of sections.</p>
+          <div class="code-splitted">
+            <div class="code-group col-md-7">
+<pre class="line-numbers"><code class="language-markup">
+&lt;section&gt;
+  &lt;video class=&quot;bg-video&quot; autoplay loop&gt;
+    &lt;source src=&quot;assets/img/video.mp4&quot; type=&quot;video/mp4&quot;&gt;
+    &lt;source src=&quot;assets/img/video.webm&quot; type=&quot;video/webm&quot;&gt;
+  &lt;/video&gt;
+&lt;/section&gt;
+</code></pre>
+            </div>
+
+            <div class="code-preview col-md-5">
+              <section>
+                <video class="bg-video" autoplay loop>
+                  <source src="assets/img/video.mp4" type="video/mp4">
+                  <source src="assets/img/video.webm" type="video/webm">
+                </video>
+              </section>
+            </div>
+          </div>
+
+          <h3>Overlay</h3>
+          <p>It's always a good practice to accompany background images and videos with an overly class to make a better contrast between background and texts. You have <code>.overlay-black</code> and <code>.overlay-white</code> classes to use with sections. Also, you can increase or decrease their opacity by adding <code>.overlay-intense</code> and <code>.overlay-pale</code> respectively.</p>
+
+
+          <h3>Helper classes</h3>
+          <p>Here's some helper classes that you can add to any section to make a small change in it.</p>
+
+          <div class="table-responsive">
+            <table class="table table-options table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>Class name</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>.no-border-bottom</code></td>
+                  <td>Sections have an 1px border-bottom. Adding this class would remove the border.</td>
+                </tr>
+
+                <tr>
+                  <td><code>.section-sm</code></td>
+                  <td>By default, each section has 96px padding in top and bottom. This class will change it to 48px.</td>
+                </tr>
+
+                <tr>
+                  <td><code>.section-lg</code></td>
+                  <td>By default, each section has 96px padding in top and bottom. This class will change it to 164px.</td>
+                </tr>
+
+                <tr>
+                  <td><code>.bg-repeat</code></td>
+                  <td>This class can be useful when you're using a pattern-based background image and you'd like to repeat it all over the section.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>Also, you can use general <a href="#sec-helper">helper classes</a> as well.</p>
+
+        </div>
+      </section>
+      <!-- END Section - Sections -->
+
+
+      <!-- Section - Tables -->
+      <section id="sec-tables">
+        <div class="container">
+          <header class="section-header">
+            <span>Arrange data</span>
+            <h2>Tables</h2>
+            <p>Arange your data into rows and columns of cells</p>
+          </header>
+
+          <h3>Basic tables</h3>
+          <p>For basic styling—light padding and only horizontal dividers—add the base class <code>.table</code> to any <code>&lt;table&gt;</code>. It may seem super redundant, but given the widespread use of tables for other plugins like calendars and date pickers, we've opted to isolate our custom table styles.</p>
+
+          <div class="code-window">
+            <div class="code-preview">
+
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+<pre class="line-numbers"><code class="language-markup">
+&lt;table class=&quot;table&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;#&lt;/th&gt;
+      &lt;th&gt;First Name&lt;/th&gt;
+      &lt;th&gt;Last Name&lt;/th&gt;
+      &lt;th&gt;Username&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;row&quot;&gt;1&lt;/th&gt;
+      &lt;td&gt;Mark&lt;/td&gt;
+      &lt;td&gt;Otto&lt;/td&gt;
+      &lt;td&gt;@mdo&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
+      &lt;td&gt;Jacob&lt;/td&gt;
+      &lt;td&gt;Thornton&lt;/td&gt;
+      &lt;td&gt;@fat&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;row&quot;&gt;3&lt;/th&gt;
+      &lt;td&gt;Larry&lt;/td&gt;
+      &lt;td&gt;the Bird&lt;/td&gt;
+      &lt;td&gt;@twitter&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+          </div>
+
+          <div class="callout callout-info" role="alert">
+            <h5>More samples</h5>
+            <p>For more samples and documentation, please visit <a href="http://getbootstrap.com/css/#tables">official Bootstrap documentation</a>.</p>
+          </div>
+
+
+          <h3>Options table</h3>
+          <p>Options table can be used for describing a function, event, class, etc. Make sure you'll wrap your table indside <code>.table-responsive</code> and your table has classes of <code>.table</code>, <code>.table-options</code>, <code>.table-bordered</code> and <code>.table-striped</code>.</p>
+          
+          <div class="code-window">
+            <div class="code-preview">
+
+              <div class="table-responsive">
+                <table class="table table-options table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>type</th>
+                      <th>default</th>
+                      <th>description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>interval</td>
+                      <td>number</td>
+                      <td>5000</td>
+                      <td>The amount of time to delay between automatically cycling an item. If false, carousel will not automatically cycle.</td>
+                    </tr>
+                    <tr>
+                      <td>pause</td>
+                      <td>string</td>
+                      <td>"hover"</td>
+                      <td>Pauses the cycling of the carousel on mouseenter and resumes the cycling of the carousel on mouseleave.</td>
+                    </tr>
+                    <tr>
+                      <td>delay</td>
+                      <td>number | object</td>
+                      <td>0</td>
+                      <td>
+                        Delay showing and hiding the popover (ms) - does not apply to manual trigger type if a number is supplied, delay is applied to both hide/show object structure is: <code>delay: { "show": 500, "hide": 100 }</code>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>wrap</td>
+                      <td>boolean</td>
+                      <td>true</td>
+                      <td>Whether the carousel should cycle continuously or have hard stops.</td>
+                    </tr>
+                    <tr>
+                      <td>keyboard</td>
+                      <td>boolean</td>
+                      <td>true</td>
+                      <td>Whether the carousel should react to keyboard events.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+
+<pre class="line-numbers"><code class="language-markup">
+&lt;div class=&quot;table-responsive&quot;&gt;
+  &lt;table class=&quot;table table-bordered table-striped&quot;&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+        &lt;th&gt;type&lt;/th&gt;
+        &lt;th&gt;default&lt;/th&gt;
+        &lt;th&gt;description&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;interval&lt;/td&gt;
+        &lt;td&gt;number&lt;/td&gt;
+        &lt;td&gt;5000&lt;/td&gt;
+        &lt;td&gt;The amount of time to delay between automatically cycling an item. If false, carousel will not automatically cycle.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;pause&lt;/td&gt;
+        &lt;td&gt;string&lt;/td&gt;
+        &lt;td&gt;&quot;hover&quot;&lt;/td&gt;
+        &lt;td&gt;Pauses the cycling of the carousel on mouseenter and resumes the cycling of the carousel on mouseleave.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;delay&lt;/td&gt;
+        &lt;td&gt;number | object&lt;/td&gt;
+        &lt;td&gt;0&lt;/td&gt;
+        &lt;td&gt;
+          &lt;p&gt;Delay showing and hiding the popover (ms) - does not apply to manual trigger type&lt;/p&gt;
+          &lt;p&gt;If a number is supplied, delay is applied to both hide/show&lt;/p&gt;
+          &lt;p&gt;Object structure is: &lt;code&gt;delay: { &quot;show&quot;: 500, &quot;hide&quot;: 100 }&lt;/code&gt;&lt;/p&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;wrap&lt;/td&gt;
+        &lt;td&gt;boolean&lt;/td&gt;
+        &lt;td&gt;true&lt;/td&gt;
+        &lt;td&gt;Whether the carousel should cycle continuously or have hard stops.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;keyboard&lt;/td&gt;
+        &lt;td&gt;boolean&lt;/td&gt;
+        &lt;td&gt;true&lt;/td&gt;
+        &lt;td&gt;Whether the carousel should react to keyboard events.&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+</code></pre>
+          </div>
+
+
+          <h3>Information table</h3>
+          <p>You can use this type of table to describe several related key-value-paired options. Your table has to include these classes: <code>.table</code>, <code>.table-bordered</code>, <code>.table-striped</code> and <code>.table-info</code>.</p>
+
+          <div class="code-window">
+            <div class="code-preview">
+
+              <table class="table table-bordered table-striped table-info">
+                <tbody>
+                  <tr>
+                    <td>Theme name:</td>
+                    <td>theDocs</td>
+                  </tr>
+                  <tr>
+                    <td>Description:</td>
+                    <td>A starter theme for developing your next software documentation. It's based on Twitter Bootstrap and has basic elements that you'll fequently use them.</td>
+                  </tr>
+                  <tr>
+                    <td>Created:</td>
+                    <td>05 September 2015</td>
+                  </tr>
+                  <tr>
+                    <td>Last Update:</td>
+                    <td>05 September 2015</td>
+                  </tr>
+                  <tr>
+                    <td>Documentation:</td>
+                    <td>Well documented</td>
+                  </tr>
+                  <tr>
+                    <td>Layout:</td>
+                    <td>Responsive</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+<pre class="line-numbers"><code class="language-markup">
+&lt;table class=&quot;table table-bordered table-striped table-info&quot;&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Theme name:&lt;/td&gt;
+      &lt;td&gt;theDocs&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Description:&lt;/td&gt;
+      &lt;td&gt;A starter theme for developing your next software documentation. It's based on Twitter Bootstrap and has basic elements that you'll fequently use them.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Created:&lt;/td&gt;
+      &lt;td&gt;05 September 2015&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Last Update:&lt;/td&gt;
+      &lt;td&gt;05 September 2015&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Documentation:&lt;/td&gt;
+      &lt;td&gt;Well documented&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Layout:&lt;/td&gt;
+      &lt;td&gt;Responsive&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+          </div>
+
+
+        </div>
+      </section>
+      <!-- END Section - Tables -->
+
+
+      <!-- Section - Buttons -->
+      <section id="sec-buttons">
+        <div class="container">
+          <header class="section-header">
+            <span>Perform action</span>
+            <h2>Buttons</h2>
+            <p>Use any of the available button classes to quickly create a styled button</p>
+          </header>
+
+          <h3>Types</h3>
+          <p>Use the button classes on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element. You need to start by adding <code>.btn</code> class.</p>
+
+          <h4>Regular</h4>
+          <p>Use one of the available color modifiers on your <code>.btn</code>.</p>
+
+          <div class="code-splitted">
+            <div class="code-group col-md-7">
+<pre class="line-numbers"><code class="language-markup">
+&lt;a class=&quot;btn&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+&lt;a class=&quot;btn btn-success&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+&lt;a class=&quot;btn btn-info&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+&lt;a class=&quot;btn btn-warning&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+&lt;a class=&quot;btn btn-danger&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+&lt;a class=&quot;btn btn-dark&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+&lt;a class=&quot;btn btn-white&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+</code></pre>
+            </div>
+
+            <div class="code-preview col-md-5">
+              <a class="btn" href="#">sample button</a>
+              <a class="btn btn-success" href="#">sample button</a>
+              <a class="btn btn-info" href="#">sample button</a>
+              <a class="btn btn-warning" href="#">sample button</a>
+              <a class="btn btn-danger" href="#">sample button</a>
+              <a class="btn btn-dark" href="#">sample button</a>
+              <a class="btn btn-white" href="#">sample button</a>
+            </div>
+          </div>
+
+
+
+          <h4>Outline</h4>
+          <p>Simply add <code>.btn-outline</code> to the button markup.</p>
+          <div class="code-splitted">
+            <div class="code-group col-md-7">
+<pre class="line-numbers"><code class="language-markup">
+&lt;a class=&quot;btn btn-outline&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+&lt;a class=&quot;btn btn-outline btn-success&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+&lt;a class=&quot;btn btn-outline btn-info&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+&lt;a class=&quot;btn btn-outline btn-warning&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+&lt;a class=&quot;btn btn-outline btn-danger&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+&lt;a class=&quot;btn btn-outline btn-dark&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+&lt;a class=&quot;btn btn-outline btn-white&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+</code></pre>
+            </div>
+
+            <div class="code-preview col-md-5">
+              <a class="btn btn-outline" href="#">sample button</a>
+              <a class="btn btn-outline btn-success" href="#">sample button</a>
+              <a class="btn btn-outline btn-info" href="#">sample button</a>
+              <a class="btn btn-outline btn-warning" href="#">sample button</a>
+              <a class="btn btn-outline btn-danger" href="#">sample button</a>
+              <a class="btn btn-outline btn-dark" href="#">sample button</a>
+              <a class="btn btn-outline btn-white" href="#">sample button</a>
+            </div>
+          </div>
+
+          <h4>Round</h4>
+          <p>Add <code>.btn-round</code> to the button markup.</p>
+          <div class="code-splitted">
+            <div class="code-group col-md-7">
+<pre class="line-numbers"><code class="language-markup">
+&lt;a class=&quot;btn btn-round&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+&lt;a class=&quot;btn btn-round btn-success&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+&lt;a class=&quot;btn btn-round btn-info&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+&lt;a class=&quot;btn btn-round btn-warning&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+&lt;a class=&quot;btn btn-round btn-danger&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+&lt;a class=&quot;btn btn-round btn-dark&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+&lt;a class=&quot;btn btn-round btn-white&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+</code></pre>
+            </div>
+
+            <div class="code-preview col-md-5">
+              <a class="btn btn-round" href="#">sample button</a>
+              <a class="btn btn-round btn-success" href="#">sample button</a>
+              <a class="btn btn-round btn-info" href="#">sample button</a>
+              <a class="btn btn-round btn-warning" href="#">sample button</a>
+              <a class="btn btn-round btn-danger" href="#">sample button</a>
+              <a class="btn btn-round btn-dark" href="#">sample button</a>
+              <a class="btn btn-round btn-white" href="#">sample button</a>
+            </div>
+          </div>
+
+
+          <h4>Float</h4>
+          <p>Add <code>.btn-float</code> to the button markup.</p>
+          <div class="code-splitted">
+            <div class="code-group col-md-7">
+<pre class="line-numbers"><code class="language-markup">
+&lt;a class=&quot;btn btn-float&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-pencil&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a class=&quot;btn btn-float btn-success&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-pencil&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a class=&quot;btn btn-float btn-info&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-pencil&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a class=&quot;btn btn-float btn-warning&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-pencil&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a class=&quot;btn btn-float btn-danger&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-pencil&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a class=&quot;btn btn-float btn-dark&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-pencil&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a class=&quot;btn btn-float btn-white&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-pencil&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+</code></pre>
+            </div>
+
+            <div class="code-preview col-md-5">
+              <a class="btn btn-float" href="#"><i class="fa fa-pencil"></i></a>
+              <a class="btn btn-float btn-success" href="#"><i class="fa fa-pencil"></i></a>
+              <a class="btn btn-float btn-info" href="#"><i class="fa fa-pencil"></i></a>
+              <a class="btn btn-float btn-warning" href="#"><i class="fa fa-pencil"></i></a>
+              <a class="btn btn-float btn-danger" href="#"><i class="fa fa-pencil"></i></a>
+              <a class="btn btn-float btn-dark" href="#"><i class="fa fa-pencil"></i></a>
+              <a class="btn btn-float btn-white" href="#"><i class="fa fa-pencil"></i></a>
+            </div>
+          </div>
+
+
+          <h3>Size</h3>
+          <p>Add <code>.btn-xs</code>, <code>.btn-sm</code>, <code>.btn-lg</code>, or <code>.btn-xl</code> for additional sizes.</p>
+
+          <div class="code-window">
+            <div class="code-preview">
+              
+              <a class="btn btn-xs" href="#">sample button</a>
+              <a class="btn btn-sm" href="#">sample button</a>
+              <a class="btn" href="#">sample button</a>
+              <a class="btn btn-lg" href="#">sample button</a>
+              <a class="btn btn-xl" href="#">sample button</a>
+
+              <br><br>
+
+              <a class="btn btn-outline btn-xs" href="#">sample button</a>
+              <a class="btn btn-outline btn-sm" href="#">sample button</a>
+              <a class="btn btn-outline" href="#">sample button</a>
+              <a class="btn btn-outline btn-lg" href="#">sample button</a>
+              <a class="btn btn-outline btn-xl" href="#">sample button</a>
+
+              <br><br>
+
+              <a class="btn btn-round btn-xs" href="#">sample button</a>
+              <a class="btn btn-round btn-sm" href="#">sample button</a>
+              <a class="btn btn-round" href="#">sample button</a>
+              <a class="btn btn-round btn-lg" href="#">sample button</a>
+              <a class="btn btn-round btn-xl" href="#">sample button</a>
+
+              <br><br>
+
+              <a class="btn btn-float btn-xs" href="#"><i class="fa fa-pencil"></i></a>
+              <a class="btn btn-float btn-sm" href="#"><i class="fa fa-pencil"></i></a>
+              <a class="btn btn-float" href="#"><i class="fa fa-pencil"></i></a>
+              <a class="btn btn-float btn-lg" href="#"><i class="fa fa-pencil"></i></a>
+              <a class="btn btn-float btn-xl" href="#"><i class="fa fa-pencil"></i></a>
+
+            </div>
+
+<pre class="line-numbers"><code class="language-markup">
+&lt;a class=&quot;btn btn-xs&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+&lt;a class=&quot;btn btn-sm&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+&lt;a class=&quot;btn&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+&lt;a class=&quot;btn btn-lg&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+&lt;a class=&quot;btn btn-xl&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;a class=&quot;btn btn-outline btn-xs&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+&lt;a class=&quot;btn btn-outline btn-sm&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+&lt;a class=&quot;btn btn-outline&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+&lt;a class=&quot;btn btn-outline btn-lg&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+&lt;a class=&quot;btn btn-outline btn-xl&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;a class=&quot;btn btn-round btn-xs&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+&lt;a class=&quot;btn btn-round btn-sm&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+&lt;a class=&quot;btn btn-round&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+&lt;a class=&quot;btn btn-round btn-lg&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+&lt;a class=&quot;btn btn-round btn-xl&quot; href=&quot;#&quot;&gt;sample button&lt;/a&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;a class=&quot;btn btn-float btn-xs&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-pencil&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a class=&quot;btn btn-float btn-sm&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-pencil&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a class=&quot;btn btn-float&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-pencil&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a class=&quot;btn btn-float btn-lg&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-pencil&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a class=&quot;btn btn-float btn-xl&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-pencil&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+</code></pre>
+          </div>
+
+          <h4>Blocklevel</h4>
+          <p>Create block level buttons—those that span the full width of a parent— by adding <code>.btn-block</code>.</p>
+          <div class="code-window">
+            <div class="code-preview">
+              <button type="button" class="btn btn-block btn-success">sample button</button>
+              <button type="button" class="btn btn-block btn-info">sample button</button>
+              <br>
+              <div class="row">
+                <div class="col-md-6">
+                  <button type="button" class="btn btn-block btn-dark">sample button</button>
+                  <button type="button" class="btn btn-block btn-danger">sample button</button>
+                </div>
+
+                <div class="col-md-6">
+                  <button type="button" class="btn btn-block">sample button</button>
+                  <button type="button" class="btn btn-block btn-warning">sample button</button>
+                </div>
+              </div>
+            </div>
+
+<pre class="line-numbers"><code class="language-markup">
+&lt;button type=&quot;button&quot; class=&quot;btn btn-block btn-success&quot;&gt;sample button&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-block btn-info&quot;&gt;sample button&lt;/button&gt;
+&lt;br&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-md-6&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-block&quot;&gt;sample button&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-block btn-danger&quot;&gt;sample button&lt;/button&gt;
+  &lt;lt;/div&gt;
+
+  &lt;div class=&quot;col-md-6&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-block btn-black&quot;&gt;sample button&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-block btn-warning&quot;&gt;sample button&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+          </div>
+
+
+        </div>
+      </section>
+      <!-- END Section - Buttons -->
+
+
+      <!-- Section - Labels -->
+      <section id="sec-labels">
+        <div class="container">
+          <header class="section-header">
+            <span>Outstand</span>
+            <h2>Labels</h2>
+            <p>Highlight part of your text by placing it inside a <code>.label</code> class</p>
+          </header>
+
+          <h3>Variations</h3>
+          <p>Add any of the below mentioned modifier classes to change the appearance of a label.</p>
+          <div class="code-snippet">
+<pre class="line-numbers no-name"><code class="language-markup">
+&lt;span class=&quot;label label-primary&quot;&gt;Primary&lt;/span&gt;
+&lt;span class=&quot;label label-success&quot;&gt;Success&lt;/span&gt;
+&lt;span class=&quot;label label-info&quot;&gt;Info&lt;/span&gt;
+&lt;span class=&quot;label label-warning&quot;&gt;Warning&lt;/span&gt;
+&lt;span class=&quot;label label-danger&quot;&gt;Danger&lt;/span&gt;
+&lt;span class=&quot;label label-dark&quot;&gt;Dark&lt;/span&gt;
+</code></pre>
+            <div class="code-preview">
+              <span class="label label-primary">Primary</span>
+              <span class="label label-success">Success</span>
+              <span class="label label-info">Info</span>
+              <span class="label label-warning">Warning</span>
+              <span class="label label-danger">Danger</span>
+              <span class="label label-dark">Dark</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <!-- END Section - Labels -->
+
+
+      <!-- Section - Images -->
+      <section id="sec-images">
+        <div class="container">
+          <header class="section-header">
+            <span>Text spirit</span>
+            <h2>Images</h2>
+            <p>Bold, graphic, and intentional imagery helps to engage the user</p>
+          </header>
+
+          <h3>Shapes</h3>
+          <p>Add classes to an <code>&lt;img&gt;</code> element to easily style images in any project.</p>
+
+
+          <div class="code-snippet">
+<pre class="line-numbers no-copy"><code class="language-markup">
+&lt;img class=&quot;img-rounded&quot; src=&quot;assets/img/placeholder.png&quot; alt=&quot;image&quot;&gt;
+&lt;img class=&quot;img-circle&quot; src=&quot;assets/img/placeholder.png&quot; alt=&quot;image&quot;&gt;
+&lt;img class=&quot;img-thumbnail&quot; src=&quot;assets/img/placeholder.png&quot; alt=&quot;image&quot;&gt;
+</code></pre>
+
+            <div class="code-preview">
+              <div class="row">
+                <div class="col-md-4">
+                  <img class="img-rounded" src="assets/img/placeholder.png" alt="image">
+                </div>
+
+                <div class="col-md-4">
+                  <img class="img-circle" src="assets/img/placeholder.png" alt="image">
+                </div>
+
+                <div class="col-md-4">
+                  <img class="img-thumbnail" src="assets/img/placeholder.png" alt="image">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h4>Shadow</h4>
+          <p>Add a small shadow usign <code>.img-shadow</code> class.</p>
+
+          <div class="code-splitted">
+            <div class="code-group col-md-7">
+<pre class="line-numbers no-copy"><code class="language-markup">
+&lt;img class=&quot;img-shadow&quot; src=&quot;assets/img/placeholder.png&quot; alt=&quot;image&quot;&gt;
+</code></pre>
+            </div>
+
+            <div class="code-preview col-md-5">
+              <img class="img-shadow center-block" src="assets/img/placeholder.png" alt="image">
+            </div>
+          </div>
+
+
+          <h3>Image title</h3>
+          <div class="code-splitted">
+            <div class="code-group col-md-7">
+<pre class="line-numbers no-copy"><code class="language-markup">
+&lt;figure&gt;
+  &lt;img src=&quot;assets/img/placeholder.png&quot; alt=&quot;image&quot;&gt;
+  &lt;figcaption&gt;some description about the image&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+            </div>
+
+            <div class="code-preview col-md-5">
+              <figure>
+                <img src="assets/img/placeholder.png" alt="image">
+                <figcaption>some description about the image</figcaption>
+              </figure>
+            </div>
+          </div>
+
+
+        </div>
+      </section>
+      <!-- END Section - Images -->
+
+
+      <!-- Section - Helper classes -->
+      <section id="sec-helper">
+        <div class="container">
+          <header class="section-header">
+            <span>Project-wide use</span>
+            <h2>Helper Classes</h2>
+            <p>Some other helper classes in addition to Bootstrap's helper classes</p>
+          </header>
+
+          <div class="table-responsive">
+            <table class="table table-options table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th style="width: 180px">Class name</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>.no-padding</code></td>
+                  <td>Equals to <code>padding: 0;</code></td>
+                </tr>
+
+                <tr>
+                  <td><code>.no-padding-x</code></td>
+                  <td>Equals to <code>padding-left: 0; padding-right: 0;</code></td>
+                </tr>
+
+                <tr>
+                  <td><code>.no-padding-y</code></td>
+                  <td>Equals to <code>padding-top: 0; padding-bottom: 0;</code></td>
+                </tr>
+
+                <tr>
+                  <td><code>.no-padding-top</code></td>
+                  <td>Equals to <code>padding-top: 0;</code></td>
+                </tr>
+
+                <tr>
+                  <td><code>.no-padding-bottom</code></td>
+                  <td>Equals to <code>padding-bottom: 0;</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <!-- END Section - Helper classes -->
+
+    </main>
+    <!-- END Main container -->
+
+
+    <!-- Site footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <ul class="footer-links">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Privacy policy</a></li>
+              <li><a href="#">Changelog</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="footer-socials">
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyrights &copy; 2015 All Rights Reserved by <a href="#">ShaMSofT</a>.</p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <p class="back-to-top"><a id="scroll-up" href="#">back to top</a></p>
+          </div>
+        </div>
+        
+      </div>
+    </footer>
+    <!-- END Site footer -->
+
+
+    <!-- Scripts -->
+    <script src="assets/js/app.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+  </body>
+</html>

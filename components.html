@@ -1,0 +1,2526 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <title>TheGuide - Components</title>
+
+    <!-- Styles -->
+    <link href="assets/vendors/videojs/video-js.min.css" rel="stylesheet">
+    <link href="assets/css/app.min.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,500,600,800%7COpen+Sans:300,400,500,600,700,800%7CMontserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" href="assets/img/favicon.ico">
+  </head>
+
+  <body class="sticky-nav">
+
+    <!-- Navigation -->
+    <nav class="page-navigation full-topbar">
+      <ul class="nav">
+        <li><a href="#sec-header">Header</a></li>
+        <li><a href="#sec-page-nav">Page navigation</a></li>
+        <li><a href="#sec-code">Code view</a></li>
+        <li><a href="#sec-content">Content view</a></li>
+        <li><a href="#sec-step">Steps</a></li>
+        <li><a href="#sec-featured-box">Featured box</a></li>
+        <li><a href="#sec-tab">Tabs</a></li>
+        <li><a href="#sec-callout">Callout</a></li>
+        <li><a href="#sec-file-tree">File tree</a></li>
+        <li><a href="#sec-video">Video</a></li>
+        <li><a href="#sec-lightbox">Lightbox</a></li>
+        <li><a href="#sec-color">Color palette</a></li>
+        <li><a href="#sec-req">Requirements</a></li>
+        <li><a href="#sec-counter">Counter</a></li>
+        <li><a href="#sec-testimonial">Testimonial</a></li>
+        <li><a href="#sec-icons">Icons</a></li>
+      </ul>
+    </nav>
+    <!-- END Navigation -->
+
+
+    <!-- Site header -->
+    <header class="site-header">
+
+      <!-- Logo & Navigation -->
+      <nav class="site-navigation">
+        <div class="container-fluid">
+          <div class="logo">
+            <a class="logo-default" href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
+            <a class="logo-transparent" href="index.html"><img src="assets/img/logo-alt.png" alt="logo"></a>
+          </div>
+
+          <a class="navbar-toggle" href="#" data-toggle="offcanvas"><i class="fa fa-bars"></i></a>
+
+          <ul class="nav-menu">
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="getting-started.html">Getting Started</a></li>
+            <li><a href="css.html">CSS</a></li>
+            <li><a class="active" href="components.html">Components</a></li>
+            <li>
+              <a href="#">Pages</a>
+              <ul>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="changelog.html">Changelog</a></li>
+                <li><a href="tutorial-1.html">Tutorial - 1</a></li>
+                <li><a href="tutorial-2.html">Tutorial - 2</a></li>
+                <li><a href="tutorial-3.html">Tutorial - 3</a></li>
+              </ul>
+            </li>
+            <li><a class="menu-highlighted" href="http://themeforest.net/item/theguide-online-documentation-template/14239305">Buy Now</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- END Logo & Navigation -->
+
+      <!-- Header image -->
+      <div class="header-image bg-purple no-overlay no-padding">
+        <div class="container">
+          <br><br>
+          <h1><strong>Components,</strong> Rapid development</h1>
+          <h4>Over a dozen reusable components built to provide navigation, code view, content view, file tree, callouts, and much more.</h4>
+          <br><br>
+        </div>
+      </div>
+      <!-- END Header image -->
+
+    </header>
+    <!-- END Site header -->
+
+
+    <!-- Main container -->
+    <main>
+
+      <!-- Section - Header -->
+      <section id="sec-header">
+        <div class="container">
+          <header class="section-header">
+            <span>Site navigation</span>
+            <h2>Header</h2>
+            <p>It contains site navigation, logo, and banner</p>
+          </header>
+
+          <h3>Basic style</h3>
+          <p>Following code snippet demonstrates .site-header of the current page. As you can see, it's easy to grasp the code.</p>
+<pre class="line-numbers"><code class="language-markup">
+&lt;!-- Site header --&gt;
+&lt;header class=&quot;site-header&quot;&gt;
+
+  &lt;!-- Logo &amp; Navigation --&gt;
+  &lt;nav class=&quot;site-navigation&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;div class=&quot;logo&quot;&gt;
+        &lt;a class=&quot;logo-default&quot; href=&quot;index.html&quot;&gt;&lt;img src=&quot;assets/img/logo.png&quot; alt=&quot;logo&quot;&gt;&lt;/a&gt;
+        &lt;a class=&quot;logo-transparent&quot; href=&quot;index.html&quot;&gt;&lt;img src=&quot;assets/img/logo-alt.png&quot; alt=&quot;logo&quot;&gt;&lt;/a&gt;
+      &lt;/div&gt;
+
+      &lt;a class=&quot;navbar-toggle&quot; href=&quot;#&quot; data-toggle=&quot;offcanvas&quot;&gt;&lt;i class=&quot;fa fa-bars&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+
+      &lt;ul class=&quot;nav-menu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Overview&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Getting Started&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;CSS&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;active&quot; href=&quot;#&quot;&gt;Components&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;#&quot;&gt;Pages&lt;/a&gt;
+          &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Submenu 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Submenu 2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Submenu 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Submenu 4&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;menu-highlighted&quot; href=&quot;#&quot;&gt;Buy Now&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+  &lt;!-- END Logo &amp; Navigation --&gt;
+
+  &lt;!-- Header image --&gt;
+  &lt;div class=&quot;header-image bg-purple no-overly no-padding&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;br&gt;&lt;br&gt;
+      &lt;h1&gt;&lt;strong&gt;Components,&lt;/strong&gt; Rapid development&lt;/h1&gt;
+      &lt;h4&gt;Over a dozen reusable components built to provide navigation, code view, content view, file tree, callouts, and much more.&lt;/h4&gt;
+      &lt;br&gt;&lt;br&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- END Header image --&gt;
+</code></pre>
+
+
+          <h3>Navigation</h3>
+          <p>Here, we describe some of modifier classes on navigation menu.</p>
+
+          <h5>Full width & boxed size</h5>
+          <p>The <code>.site-navigation > div</code> tag is responsible for sizing. It would be boxed-size if it has <code>.container</code> class, and will become full size by having <code>.container-fluid</code>.</p>
+
+          <h5>Sticky & transparent</h5>
+          <p>The <code>body</code> tag is responsible for changing this two property. To have a sticky navigation bar in top of the page, add <code>.sticky-nav</code> to the body tag. If you have a banner in your header and would like to put your navigation above it before scrolling, add <code>.transparent-nav</code> to the body tag.</p>
+
+
+          <h3>Banner</h3>
+          <p>You can see different types of banner across this documentation. You'd be able to have an image backgrounded banner or just a solid color background. Setting background is like how you can add them in <a href="css.html/#sec-sections-bg">sections</a>.</p>
+          <p>By default, <code>.header-image</code> has a pale black overly to make contrast between texts on the image. You can simply ignore it by adding <code>.no-overlay</code> class to the <code>.header-image</code> tag. It would be better to remove overly on solid color background banners. Also, make sure to use <code>.text-left</code>, <code>.text-center</code>, <code>.text-right</code>, <code>&lt;br&gt;</code>, etc. for alignment and spacing.</p>
+
+        </div>
+      </section>
+      <!-- END Section - Header -->
+
+      <!-- Section - Page navigation -->
+      <section id="sec-page-nav">
+        <div class="container">
+          <header class="section-header">
+            <span>Scroll spy</span>
+            <h2>Page navigation</h2>
+            <p>Provide an in-page navigation for user to access each section easily</p>
+          </header>
+
+
+          <h3>Basic style</h3>
+          <p>Following code snippet demonstrates .page-navigation of the css.html page. As you can see, it's easy to grasp the code. You just need to put section's ID inside href of an <code>&lt;a&gt;</code> tag.</p>
+<pre class="line-numbers"><code class="language-markup">
+&lt;!-- Navigation --&gt;
+&lt;nav class=&quot;page-navigation full-topbar&quot;&gt;
+  &lt;ul class=&quot;nav&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#sec-typography&quot;&gt;Typography&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#sec-sections&quot;&gt;Sections&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#sec-tables&quot;&gt;Tables&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#sec-buttons&quot;&gt;Buttons&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#sec-labels&quot;&gt;Labels&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#sec-images&quot;&gt;Images&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#sec-helper&quot;&gt;Helper classes&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;!-- END Navigation --&gt;
+</code></pre>
+
+          <h3>Variations</h3>
+          <div class="row">
+            <div class="col-md-6">
+              <p>You have two different layout for .page-navigation; <code>.full-topbar</code> which shows all the links title like this page, and <code>.dotted-topbar</code> which shows a dot instead of the link text to save some space. The dotted version would be nice for navigations with a large number of links. In small devices, we automatically use dotted version.</p>
+            </div>
+
+            <div class="col-md-6">
+              <figure>
+                <img class="img-shadow" src="assets/img/dotted-topbar.png" alt="dotted topbar">
+                <figcaption>Dotted topbar version of css.html page</figcaption>
+              </figure>
+            </div>
+          </div>
+
+
+        </div>
+      </section>
+      <!-- END Section - Page navigation -->
+
+      <!-- Section - Code view -->
+      <section id="sec-code">
+        <div class="container">
+          <header class="section-header">
+            <span>Show codes</span>
+            <h2>Code view</h2>
+            <p>You have a plenty of options to demonstrate your code and result in your documentation</p>
+          </header>
+
+          <h3>Simple code blocks</h3>
+          <p>Here is basic usage of tags like <code>code</code>, <code>pre</code>, <code>kbd</code>, <code>var</code> and <code>samp</code>.</p>
+
+          <h4>Inline</h4>
+          <p>Wrap inline snippets of code with <code>&lt;code&gt;</code>.</p>
+          <div class="code-snippet">
+            <div class="code-preview">
+              For example, <code>&lt;section&gt;</code> should be wrapped as inline.
+            </div>
+            <pre class="no-name no-copy"><code class="language-markup">For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped as inline.</code></pre>
+          </div>
+
+          <h4>Basic block</h4>
+          <p>Use <code>&lt;pre&gt;</code> for multiple lines of code. Be sure to escape any angle brackets in the code for proper rendering.</p>
+          <div class="code-snippet">
+            <div class="code-preview">
+              <pre>Sample text here...</pre>
+            </div>
+            <pre class="no-name no-copy"><code class="language-markup">&lt;pre&gt;Sample text here...&lt;/pre&gt;</code></pre>
+          </div>
+          <p>You may optionally add the <code>.pre-scrollable</code> class, which will set a max-height of 350px and provide a y-axis scrollbar.</p>
+
+          <h4>User input</h4>
+          <p>Use the <code>&lt;kbd&gt;</code> to indicate input that is typically entered via keyboard.</p>
+          <div class="code-snippet">
+            <div class="code-preview">
+              To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
+              To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
+            </div>
+            <pre class="no-name no-copy"><code class="language-markup">
+To switch directories, type &lt;kbd&gt;cd&lt;/kbd&gt; followed by the name of the directory.&lt;br&gt;
+To edit settings, press &lt;kbd&gt;&lt;kbd&gt;ctrl&lt;/kbd&gt; + &lt;kbd&gt;,&lt;/kbd&gt;&lt;/kbd&gt;</code></pre>
+          </div>
+
+          <h4>Variables</h4>
+          <p>For indicating variables use the <code>&lt;var&gt;</code> tag.</p>
+          <div class="code-snippet">
+            <div class="code-preview">
+              <var>y</var> = <var>m</var><var>x</var> + <var>b</var>
+            </div>
+            <pre class="no-name no-copy"><code class="language-markup">&lt;var&gt;y&lt;/var&gt; = &lt;var&gt;m&lt;/var&gt;&lt;var&gt;x&lt;/var&gt; + &lt;var&gt;b&lt;/var&gt;</code></pre>
+          </div>
+
+          <h4>Sample output</h4>
+          <p>For indicating blocks sample output from a program use the <code>&lt;samp&gt;</code> tag.</p>
+          <div class="code-snippet">
+            <div class="code-preview">
+              <samp>This text is meant to be treated as sample output from a computer program.</samp>
+            </div>
+            <pre class="no-name no-copy"><code class="language-markup">&lt;samp&gt;This text is meant to be treated as sample output from a computer program.&lt;/samp&gt;</code></pre>
+          </div>
+
+
+
+          <h3>Syntax highlighter</h3>
+          <p>theDocs uses <code>PrismJs</code> for syntax highlighting code snippets. You have to put your code inside <code>&lt;pre&gt;&lt;code class=&quot;language-xxxx&quot;&gt;</code> which <code>xxxx</code> is the name of language.</p>
+
+<pre class="no-copy"><code class="language-markup">
+&lt;p&gt;Something to show in &lt;strong&gt;bold&lt;/strong&gt; text.&lt;/p&gt;
+...
+&lt;i>Italic text&lt;/i>
+</code></pre>
+
+          <p>If you need to include line numbers, add class <code>.line-numbers</code> to the <code>&lt;pre></code> tag.</p>
+
+<pre class="line-numbers no-copy"><code class="language-markup">
+&lt;p&gt;Something to show in &lt;strong&gt;bold&lt;/strong&gt; text.&lt;/p&gt;
+...
+&lt;i>Italic text&lt;/i>
+</code></pre>
+
+          <h4>Simple code view</h4>
+          <p>Just add <code>.simple-view</code> class to the <code>&lt;pre&gt;</code> tag to have a code view like below one.</p>
+
+<pre class="simple-view no-copy"><code class="language-markup">
+&lt;p&gt;Something to show in &lt;strong&gt;bold&lt;/strong&gt; text.&lt;/p&gt;
+...
+&lt;i>Italic text&lt;/i>
+</code></pre>
+
+          <h4>Supported languages</h4>
+          <p>This is the list of all languages currently supported by Prism, with their corresponding alias, to use in place of <code>xxxx</code> in the <code>language-xxxx</code> class:</p>
+
+          <ul class="prism-languages">
+            <li>HTML/XML <code>markup</code></li>
+            <li>CSS <code>css</code></li>
+            <li>C-like <code>clike</code></li>
+            <li>JavaScript <code>javascript</code></li>
+            <li>ASP.NET (C#) <code>aspnet</code></li>
+            <li>Bash <code>bash</code></li>
+            <li>C <code>c</code></li>
+            <li>C# <code>csharp</code></li>
+            <li>C++ <code>cpp</code></li>
+            <li>CoffeeScript <code>coffeescript</code></li>
+            <li>Git <code>git</code></li>
+            <li>HTTP <code>http</code></li>
+            <li>Ini <code>ini</code></li>
+            <li>Java <code>java</code></li>
+            <li>LaTeX <code>latex</code></li>
+            <li>Less <code>less</code></li>
+            <li>MATLAB <code>matlab</code></li>
+            <li>Objective-C <code>objectivec</code></li>
+            <li>Perl <code>perl</code></li>
+            <li>PHP <code>php</code></li>
+            <li>Python <code>python</code></li>
+            <li>Ruby <code>ruby</code></li>
+            <li>Sass (Scss) <code>scss</code></li>
+            <li>SQL <code>sql</code></li>
+            <li>Swift <code>swift</code></li>
+          </ul>
+
+
+
+
+          <h3 id="sec-code-wrappers">Code wrappers</h3>
+          <p>If your code snippet includes several languages or a preview of result, it's better to use one of the following code wrappers.</p>
+
+          <!-- Code Window -->
+          <h4>Code window</h4>
+          <p>Wrap your code and preview inside <code>&lt;div class=&quot;code-window&quot;&gt;...&lt;/div&gt;</code> to show them in a window style with different tabs. In this way, reader can see one code snippet in a same time.</p>
+
+          <div class="code-window">
+            <div class="code-preview">
+              <p>This is a normal paragraph without any contextual classes.</p>
+              <p class="text-primary">A paragraph with .text-primary class.</p>
+              <p class="text-success">A paragraph with .text-success class.</p>
+              <p class="text-info">A paragraph with .text-info class.</p>
+              <p class="text-warning">A paragraph with .text-warning class.</p>
+              <p class="text-danger">A paragraph with .text-danger class.</p>
+              <p class="text-gray">A paragraph with .text-gray class.</p>
+              <p class="text-dark">A paragraph with .text-dark class.</p>
+            </div>
+
+<pre class="line-numbers"><code class="language-markup">
+&lt;p&gt;This is a normal paragraph without any contextual classes.&lt;/p&gt;
+&lt;p class=&quot;text-primary&quot;&gt;A paragraph with .text-primary class.&lt;/p&gt;
+&lt;p class=&quot;text-success&quot;&gt;A paragraph with .text-success class.&lt;/p&gt;
+&lt;p class=&quot;text-info&quot;&gt;A paragraph with .text-info class.&lt;/p&gt;
+&lt;p class=&quot;text-warning&quot;&gt;A paragraph with .text-warning class.&lt;/p&gt;
+&lt;p class=&quot;text-danger&quot;&gt;A paragraph with .text-danger class.&lt;/p&gt;
+&lt;p class=&quot;text-gray&quot;&gt;A paragraph with .text-gray class.&lt;/p&gt;
+&lt;p class=&quot;text-dark&quot;&gt;A paragraph with .text-dark class.&lt;/p&gt;
+</code></pre>
+
+<pre class="line-numbers"><code class="language-css">
+.text-primary { color: #2196F3; }
+.text-success { color: #4CAF50; }
+.text-info    { color: #29B6F6; }
+.text-warning { color: #FF9800; }
+.text-danger  { color: #F44336; }
+.text-purple  { color: #6D5CAE; }
+.text-teal    { color: #00BFA5; }
+.text-gray    { color: #bbbbbb; }
+.text-dark    { color: #424242; }
+.text-white   { color: #ffffff; }
+</code></pre>
+
+<pre class="line-numbers"><code class="language-javascript">
+$('.sidenav.dropable > li > a').click(function(e){
+  if ( 0 == $(this).next("ul").size() || 0 == $(this).next("ul:hidden").size() ) {
+      return;
+  }
+  e.preventDefault();
+  $(this).parents(".sidenav").find("ul").not(":hidden").slideUp(300);
+  $(this).next("ul").slideDown(300);
+});
+</code></pre>
+
+          </div>
+
+          <p>Here is the code which we used to draw above code window:</p>
+<pre class="line-numbers"><code class="language-markup">
+&lt;div class=&quot;code-window&quot;&gt;
+  &lt;div class=&quot;code-preview&quot;&gt;...&lt;/div&gt;
+  &lt;pre class=&quot;line-numbers&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;...&lt;/code&gt;&lt;/pre&gt;
+  &lt;pre class=&quot;line-numbers&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;...&lt;/code&gt;&lt;/pre&gt;
+  &lt;pre class=&quot;line-numbers&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;...&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</code></pre>
+
+          <!-- Code Tabs -->
+          <h4>Code splitted</h4>
+          <p>Wrap your code and preview inside <code>&lt;div class=&quot;code-splitted&quot;&gt;...&lt;/div&gt;</code> to show them horizontally in two side.</p>
+
+          <div class="code-splitted">
+            <div class="code-group col-md-7">
+
+<pre class="line-numbers"><code class="language-markup">
+&lt;p&gt;This is a normal paragraph without any contextual classes.&lt;/p&gt;
+&lt;p class=&quot;text-primary&quot;&gt;A paragraph with .text-primary class.&lt;/p&gt;
+&lt;p class=&quot;text-success&quot;&gt;A paragraph with .text-success class.&lt;/p&gt;
+&lt;p class=&quot;text-info&quot;&gt;A paragraph with .text-info class.&lt;/p&gt;
+&lt;p class=&quot;text-warning&quot;&gt;A paragraph with .text-warning class.&lt;/p&gt;
+&lt;p class=&quot;text-danger&quot;&gt;A paragraph with .text-danger class.&lt;/p&gt;
+&lt;p class=&quot;text-gray&quot;&gt;A paragraph with .text-gray class.&lt;/p&gt;
+&lt;p class=&quot;text-dark&quot;&gt;A paragraph with .text-dark class.&lt;/p&gt;
+</code></pre>
+
+<pre class="line-numbers"><code class="language-css">
+.text-primary { color: #2196F3; }
+.text-success { color: #4CAF50; }
+.text-info    { color: #29B6F6; }
+.text-warning { color: #FF9800; }
+.text-danger  { color: #F44336; }
+.text-purple  { color: #6D5CAE; }
+.text-teal    { color: #00BFA5; }
+.text-gray    { color: #bbbbbb; }
+.text-dark    { color: #424242; }
+.text-white   { color: #ffffff; }
+</code></pre>
+
+<pre class="line-numbers"><code class="language-javascript">
+$('.sidenav.dropable > li > a').click(function(e){
+  if ( 0 == $(this).next("ul").size() || 0 == $(this).next("ul:hidden").size() ) {
+      return;
+  }
+  e.preventDefault();
+  $(this).parents(".sidenav").find("ul").not(":hidden").slideUp(300);
+  $(this).next("ul").slideDown(300);
+});
+</code></pre>
+
+            </div>
+
+            <div class="code-preview col-md-5">
+              <p>This is a normal paragraph without any contextual classes.</p>
+              <p class="text-primary">A paragraph with .text-primary class.</p>
+              <p class="text-success">A paragraph with .text-success class.</p>
+              <p class="text-info">A paragraph with .text-info class.</p>
+              <p class="text-warning">A paragraph with .text-warning class.</p>
+              <p class="text-danger">A paragraph with .text-danger class.</p>
+              <p class="text-gray">A paragraph with .text-gray class.</p>
+              <p class="text-dark">A paragraph with .text-dark class.</p>
+            </div>
+
+          </div>
+
+          <p>Here is the code which we used to draw above code splitted:</p>
+<pre class="line-numbers"><code class="language-markup">
+&lt;div class=&quot;code-splitted&quot;&gt;
+
+  &lt;div class=&quot;code-group col-md-7&quot;&gt;
+    &lt;pre class=&quot;line-numbers&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;...&lt;/code&gt;&lt;/pre&gt;
+    &lt;pre class=&quot;line-numbers&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;...&lt;/code&gt;&lt;/pre&gt;
+    &lt;pre class=&quot;line-numbers&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;...&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;code-preview col-md-5&quot;&gt;
+    ...
+  &lt;/div&gt;
+
+&lt;/div&gt;
+</code></pre>
+
+          <!-- Code Snippet -->
+          <h4>Code snippet</h4>
+          <p>Wrap your code and preview inside <code>&lt;div class=&quot;code-snippet&quot;&gt;...&lt;/div&gt;</code> to show them in a vertical style. Use this style to show all of the codes in a same view.</p>
+
+          <div class="code-snippet">
+            <div class="code-preview">
+              <p>This is a normal paragraph without any contextual classes.</p>
+              <p class="text-primary">A paragraph with .text-primary class.</p>
+              <p class="text-success">A paragraph with .text-success class.</p>
+              <p class="text-info">A paragraph with .text-info class.</p>
+              <p class="text-warning">A paragraph with .text-warning class.</p>
+              <p class="text-danger">A paragraph with .text-danger class.</p>
+              <p class="text-gray">A paragraph with .text-gray class.</p>
+              <p class="text-dark">A paragraph with .text-dark class.</p>
+            </div>
+
+<pre class="line-numbers"><code class="language-markup">
+&lt;p&gt;This is a normal paragraph without any contextual classes.&lt;/p&gt;
+&lt;p class=&quot;text-primary&quot;&gt;A paragraph with .text-primary class.&lt;/p&gt;
+&lt;p class=&quot;text-success&quot;&gt;A paragraph with .text-success class.&lt;/p&gt;
+&lt;p class=&quot;text-info&quot;&gt;A paragraph with .text-info class.&lt;/p&gt;
+&lt;p class=&quot;text-warning&quot;&gt;A paragraph with .text-warning class.&lt;/p&gt;
+&lt;p class=&quot;text-danger&quot;&gt;A paragraph with .text-danger class.&lt;/p&gt;
+&lt;p class=&quot;text-gray&quot;&gt;A paragraph with .text-gray class.&lt;/p&gt;
+&lt;p class=&quot;text-dark&quot;&gt;A paragraph with .text-dark class.&lt;/p&gt;
+</code></pre>
+
+<pre class="line-numbers"><code class="language-css">
+.text-primary { color: #2196F3; }
+.text-success { color: #4CAF50; }
+.text-info    { color: #29B6F6; }
+.text-warning { color: #FF9800; }
+.text-danger  { color: #F44336; }
+.text-purple  { color: #6D5CAE; }
+.text-teal    { color: #00BFA5; }
+.text-gray    { color: #bbbbbb; }
+.text-dark    { color: #424242; }
+.text-white   { color: #ffffff; }
+</code></pre>
+
+<pre class="line-numbers"><code class="language-javascript">
+$('.sidenav.dropable > li > a').click(function(e){
+  if ( 0 == $(this).next("ul").size() || 0 == $(this).next("ul:hidden").size() ) {
+      return;
+  }
+  e.preventDefault();
+  $(this).parents(".sidenav").find("ul").not(":hidden").slideUp(300);
+  $(this).next("ul").slideDown(300);
+});
+</code></pre>
+
+          </div>
+
+          <p>Here is the code which we used to draw above code snippet:</p>
+<pre class="line-numbers"><code class="language-markup">
+&lt;div class=&quot;code-snippet&quot;&gt;
+  &lt;div class=&quot;code-preview&quot;&gt;...&lt;/div&gt;
+  &lt;pre class=&quot;line-numbers&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;...&lt;/code&gt;&lt;/pre&gt;
+  &lt;pre class=&quot;line-numbers&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;...&lt;/code&gt;&lt;/pre&gt;
+  &lt;pre class=&quot;line-numbers&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;...&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</code></pre>
+
+
+          <h4>Helper classes</h4>
+          <p>Each <code>&lt;pre&gt;</code> tag would accept two modifier class:</p>
+          <ul>
+            <li><code>.no-copy</code>: Remove copy button</li>
+            <li><code>.no-name</code>: Remove language name which is located beside copy button</li>
+          </ul>
+
+        </div>
+      </section>
+      <!-- END Section - Code view -->
+
+      <!-- Section - Content view -->
+      <section id="sec-content">
+        <div class="container">
+          <header class="section-header">
+            <span>List layouts</span>
+            <h2>Content view</h2>
+            <p>Categorize your links and contents inside a decent content view</p>
+          </header>
+
+          <p>Views are another way to display several related information together. Mostly you can use them to list the articles which is available in your documentation. Choose the layout that suits the type of content you’re displaying.</p>
+
+
+
+          <h3>Link list</h3>
+          <p>In this view, you can categorize your articles or tutorials in several part and show more content in fewer space.</p>
+
+          <div class="code-window">
+            <div class="code-preview">
+
+              <ul class="link-list">
+                <li>
+                  <h5>Getting started</h5>
+                  <a href="#">New To theDocs - Where to Start</a>
+                  <a href="#">theDocs in Your Language</a>
+                  <a href="#">Lessons</a>
+                  <a href="#">Tutorials</a>
+                  <a href="#">Frequently Asked Questions</a>
+                </li>
+
+                <li>
+                  <h5>Learn How to Use</h5>
+                  <a href="#">Creating a starter page</a>
+                  <a href="#">Creat your header</a>
+                  <a href="#">Creat a footer</a>
+                  <a href="#">Add links to sidebar</a>
+                </li>
+
+                <li>
+                  <h5>Working With Themes</h5>
+                  <a href="#">Theme Development</a>
+                  <a href="#">Design and Layout</a>
+                  <a href="#">Color cariations</a>
+                </li>
+
+                <li>
+                  <h5>Write a Plugin</h5>
+                  <a href="#">Writing a Plugin</a>
+                  <a href="#">Plugin API</a>
+                  <a href="#">Plugin Resources</a>
+                </li>
+
+                <li>
+                  <h5>Contribute to Development</h5>
+                  <a href="#">Developer Documentation</a>
+                  <a href="#">Reporting Bugs</a>
+                  <a href="#">Development Blog</a>
+                  <a href="#">FAQ Developer Documentation</a>
+                </li>
+              </ul>
+
+            </div>
+
+<pre class="line-numbers"><code class="language-markup">
+&lt;ul class=&quot;link-list&quot;&gt;
+  &lt;li&gt;
+    &lt;h5&gt;Getting started&lt;/h5&gt;
+    &lt;a href=&quot;#&quot;&gt;New To theDocs - Where to Start&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;theDocs in Your Language&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;Lessons&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;Tutorials&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;Frequently Asked Questions&lt;/a&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;h5&gt;Learn How to Use&lt;/h5&gt;
+    &lt;a href=&quot;#&quot;&gt;Creating a starter page&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;Creat your header&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;Creat a footer&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;Add links to sidebar&lt;/a&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;h5&gt;Working With Themes&lt;/h5&gt;
+    &lt;a href=&quot;#&quot;&gt;Theme Development&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;Design and Layout&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;Color cariations&lt;/a&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;h5&gt;Write a Plugin&lt;/h5&gt;
+    &lt;a href=&quot;#&quot;&gt;Writing a Plugin&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;Plugin API&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;Plugin Resources&lt;/a&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;h5&gt;Contribute to Development&lt;/h5&gt;
+    &lt;a href=&quot;#&quot;&gt;Developer Documentation&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;Reporting Bugs&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;Development Blog&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;FAQ Developer Documentation&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+          </div>
+
+          <div class="callout callout-info" role="alert">
+            <h5>Three column</h5>
+            <p>You have size modifiers to use with <code>.link-lists</code>. They are <code>.cols-1</code>, <code>.cols-2</code>, and <code>.cols-4</code> which modifies default columns number that is three.</p>
+          </div>
+
+
+
+          <h3>List view</h3>
+          <p>In this way, you can show meta data below the title, and write some description of the article before viewing it.</p>
+
+          <div class="code-window">
+            <div class="code-preview">
+
+              <ul class="list-view">
+                <li>
+                  <h5><a href="#">Get Going Fast</a></h5>
+                  <p class="meta-data">August 19, 2015 | 3 mins | Beginner</p>
+                  <p>A quick-start guide to all the basics you need to get up and running now. Vestibulum lacinia nibh vel porttitor lacinia. Praesent ante nunc, auctor mattis luctus quis, condimentum sed tellus.</p>
+                </li>
+
+                <li>
+                  <h5><a href="#">Get a Homepage</a></h5>
+                  <p class="meta-data">August 26, 2015 | 5 mins | Beginner</p>
+                  <p>Learn how to turn that blog into a static website for your business or your organization. Vestibulum lacinia nibh vel porttitor lacinia. Praesent ante nunc, auctor mattis luctus quis, condimentum sed tellus.</p>
+                </li>
+
+                <li>
+                  <h5><a href="#">Get Lingo</a></h5>
+                  <p class="meta-data">September 05, 2015 | 12 mins | Intermediate</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis bibendum ligula. Vestibulum lacinia nibh vel porttitor lacinia. Praesent ante nunc, auctor mattis luctus quis, condimentum sed tellus.</p>
+                </li>
+              </ul>
+
+            </div>
+
+<pre class="line-numbers"><code class="language-markup">
+&lt;ul class=&quot;list-view&quot;&gt;
+  &lt;li&gt;
+    &lt;h5&gt;&lt;a href=&quot;#&quot;&gt;Get Going Fast&lt;/a&gt;&lt;/h5&gt;
+    &lt;p class=&quot;meta-data&quot;&gt;August 19, 2015 | 3 mins | Beginner&lt;/p&gt;
+    &lt;p&gt;A quick-start guide to all the basics you need to get up and running now. Vestibulum lacinia nibh vel porttitor lacinia. Praesent ante nunc, auctor mattis luctus quis, condimentum sed tellus.&lt;/p&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;h5&gt;&lt;a href=&quot;#&quot;&gt;Get a Homepage&lt;/a&gt;&lt;/h5&gt;
+    &lt;p class=&quot;meta-data&quot;&gt;August 26, 2015 | 5 mins | Beginner&lt;/p&gt;
+    &lt;p&gt;Learn how to turn that blog into a static website for your business or your organization. Vestibulum lacinia nibh vel porttitor lacinia. Praesent ante nunc, auctor mattis luctus quis, condimentum sed tellus.&lt;/p&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;h5&gt;&lt;a href=&quot;#&quot;&gt;Get Lingo&lt;/a&gt;&lt;/h5&gt;
+    &lt;p class=&quot;meta-data&quot;&gt;September 05, 2015 | 12 mins | Intermediate&lt;/p&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis bibendum ligula. Vestibulum lacinia nibh vel porttitor lacinia. Praesent ante nunc, auctor mattis luctus quis, condimentum sed tellus.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+          </div>
+
+          <p>You can remove border bottom by applying <code>.no-border-bottom</code> class to the <code>.list-view</code>.</p>
+
+
+
+          <h3>List view item</h3>
+          <p>You can use list view style with default bootstrap grid system.</p>
+
+          <div class="code-window">
+            <div class="code-preview">
+
+              <div class="row">
+                <div class="col-md-4 list-view-item">
+                  <h5><a href="#">Get Going Fast</a></h5>
+                  <p class="meta-data">August 19, 2015 | 3 mins | Beginner</p>
+                  <p>A quick-start guide to all the basics you need to get up and running now. Vestibulum lacinia nibh vel porttitor lacinia. Praesent ante nunc, auctor mattis luctus quis, condimentum sed tellus.</p>
+                </div>
+
+                <div class="col-md-4 list-view-item">
+                  <h5><a href="#">Get a Homepage</a></h5>
+                  <p class="meta-data">August 26, 2015 | 5 mins | Beginner</p>
+                  <p>Learn how to turn that blog into a static website for your business or your organization. Vestibulum lacinia nibh vel porttitor lacinia. Praesent ante nunc, auctor mattis luctus quis, condimentum sed tellus.</p>
+                </div>
+
+                <div class="col-md-4 list-view-item">
+                  <h5><a href="#">Get Lingo</a></h5>
+                  <p class="meta-data">September 05, 2015 | 12 mins | Intermediate</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis bibendum ligula. Vestibulum lacinia nibh vel porttitor lacinia. Praesent ante nunc, auctor mattis luctus quis, condimentum sed tellus.</p>
+                </div>
+              </div>
+
+            </div>
+
+<pre class="line-numbers"><code class="language-markup">
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-md-4 list-view-item&quot;&gt;
+    &lt;h5&gt;&lt;a href=&quot;#&quot;&gt;Get Going Fast&lt;/a&gt;&lt;/h5&gt;
+    &lt;p class=&quot;meta-data&quot;&gt;August 19, 2015 | 3 mins | Beginner&lt;/p&gt;
+    &lt;p&gt;A quick-start guide to all the basics you need to get up and running now. Vestibulum lacinia nibh vel porttitor lacinia. Praesent ante nunc, auctor mattis luctus quis, condimentum sed tellus.&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;col-md-4 list-view-item&quot;&gt;
+    &lt;h5&gt;&lt;a href=&quot;#&quot;&gt;Get a Homepage&lt;/a&gt;&lt;/h5&gt;
+    &lt;p class=&quot;meta-data&quot;&gt;August 26, 2015 | 5 mins | Beginner&lt;/p&gt;
+    &lt;p&gt;Learn how to turn that blog into a static website for your business or your organization. Vestibulum lacinia nibh vel porttitor lacinia. Praesent ante nunc, auctor mattis luctus quis, condimentum sed tellus.&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;col-md-4 list-view-item&quot;&gt;
+    &lt;h5&gt;&lt;a href=&quot;#&quot;&gt;Get Lingo&lt;/a&gt;&lt;/h5&gt;
+    &lt;p class=&quot;meta-data&quot;&gt;September 05, 2015 | 12 mins | Intermediate&lt;/p&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis bibendum ligula. Vestibulum lacinia nibh vel porttitor lacinia. Praesent ante nunc, auctor mattis luctus quis, condimentum sed tellus.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+          </div>
+
+          <p>Also, you can modify appearance of item by adding category and continue reading link.</p>
+          <div class="code-splitted">
+            <div class="code-group col-md-7">
+<pre class="line-numbers"><code class="language-markup">
+&lt;div class=&quot;list-view-item&quot;&gt;
+  &lt;span&gt;Design&lt;/span&gt;
+  &lt;h5&gt;Get a Homepage&lt;/h5&gt;
+  &lt;p class=&quot;meta-data&quot;&gt;August 26, 2015 | 5 mins | Beginner&lt;/p&gt;
+  &lt;p&gt;Learn how to...&lt;/p&gt;
+  &lt;a class=&quot;read-more&quot; href=&quot;#&quot;&gt;Continue reading...&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+
+            <div class="code-preview col-md-5">
+              <div class="list-view-item">
+                <span>Design</span>
+                <h5>Get a Homepage</h5>
+                <p class="meta-data">August 26, 2015 | 5 mins | Beginner</p>
+                <p>Learn how to turn that blog into a static website for your business or your organization. Vestibulum lacinia nibh vel porttitor lacinia. Praesent ante nunc, auctor mattis luctus quis, condimentum sed tellus.</p>
+                <a class="read-more" href="#">Continue reading...</a>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </section>
+      <!-- END Section - Content view -->
+
+      <!-- Section - Steps -->
+      <section id="sec-step">
+        <div class="container">
+          <header class="section-header">
+            <span>Action order</span>
+            <h2>Steps</h2>
+            <p>Prepare a chronological guide to perform an action in your product</p>
+          </header>
+
+          <h3>Text style</h3>
+          <p>The simplest way to make a step.</p>
+
+          <div class="code-window">
+            <div class="code-preview">
+
+              <ul class="step-text">
+                <li>
+                  <h5>Place your cursor</h5>
+                  <p>A gallery can go anywhere on a page or post - by itself on a blank page, or above, below, or in the midst of text. Start by placing your cursor where you want the gallery to appear.</p>
+                </li>
+
+                <li>
+                  <h5>Click the Add Media button</h5>
+                  <p>Once you've placed your cursor where you want your image gallery to appear, click on the Add Media button (located left above the editing window) to launch the media uploader interface. In the resulting popup window, select the 'Create a Gallery' option from the list of actions on the left.</p>
+                </li>
+
+                <li>
+                  <h5>Add and/or Select the Images</h5>
+                  <p>You can add or select the images you want to include in your image gallery by choosing from either of the following options in the center of the media uploader window.</p>
+                </li>
+
+                <li>
+                  <h5>Edit Your Gallery</h5>
+                  <p>On the Edit Gallery page, you can do the following things before inserting the gallery you have created into your page or post.</p>
+                </li>
+              </ul>
+
+            </div>
+
+<pre class="line-numbers"><code class="language-markup">
+&lt;h3&gt;Adding a gallary to Wordpress&lt;/h3&gt;
+&lt;ul class=&quot;step-text&quot;&gt;
+  &lt;li&gt;
+    &lt;h5&gt;Place your cursor&lt;/h5&gt;
+    &lt;p&gt;A gallery can go anywhere on a page or post - by itself on a blank page, or above, below, or in the midst of text. Start by placing your cursor where you want the gallery to appear.&lt;/p&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;h5&gt;Click the Add Media button&lt;/h5&gt;
+    &lt;p&gt;...&lt;/p&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;h5&gt;Add and/or Select the Images&lt;/h5&gt;
+    &lt;p&gt;...&lt;/p&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;h5&gt;Edit Your Gallery&lt;/h5&gt;
+    &lt;p&gt;...&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+          </div>
+
+          <p>Also, you can add <code>.step-cols-2</code> or <code>.step-cols-3</code> to the <code>.step-text</code> to change number of rows.</p>
+
+
+          <h3>Image style</h3>
+          <p>If you have a picture for every step, we suggest you to use this step as it's more interactive.</p>
+
+          <div class="code-window">
+            <div class="code-preview">
+
+              <div id="step-image" class="step-image carousel slide">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#step-image" data-slide-to="0" class="active"></li>
+                  <li data-target="#step-image" data-slide-to="1"></li>
+                  <li data-target="#step-image" data-slide-to="2"></li>
+                  <li data-target="#step-image" data-slide-to="3"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active">
+                    <img src="assets/img/step1.png" alt="">
+                    <div class="carousel-caption">
+                      <h4>Placing your cursor</h4>
+                      <p>In order to add an image to your page or post, you must first insert your cursor in the place in the text where you want the image to appear. By placing your cursor within your text, you can add images inline with your content. You can also place your cursor on a blank line if you want the image to appear by itself instead.</p>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <img src="assets/img/step2.png" alt="">
+                    <div class="carousel-caption">
+                      <h4>Click the Add Media button</h4>
+                      <p>Once you’ve placed your cursor on the line where you want your image to appear, click on the Add Media button to launch the media uploader interface, and then select the Insert Media option from the list of actions in the left side of the media uploader window.</p>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <img src="assets/img/step3.png" alt="">
+                    <div class="carousel-caption">
+                      <h4>Add or Select Your Image</h4>
+                      <div>
+                        <p>You can add or select the image you want to add to your page or post by choosing from either of the following options in the center of the media uploader window:</p>
+                        <ul>
+                          <li><strong>Upload Files:</strong> Upload the image you want to use from your computer by dragging it into the upload area.</li>
+                          <li><strong>Media Library:</strong> Select from any previously uploaded images in the media library by clicking on the one you wish to add to your page or post.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <img src="assets/img/step4.png" alt="">
+                    <div class="carousel-caption">
+                      <h4>Attachment Details</h4>
+                      <p>The Attachment Details pane displays a small un-cropped thumbnail of the image, as well as important information such as the filename, date uploaded, and image dimensions in pixels.</p>
+                    </div>
+                  </div>
+                  
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#step-image" role="button" data-slide="prev">
+                  <i class="fa fa-angle-left"></i>
+                </a>
+                <a class="right carousel-control" href="#step-image" role="button" data-slide="next">
+                  <i class="fa fa-angle-right"></i>
+                </a>
+              </div>
+
+            </div>
+
+<pre class="line-numbers"><code class="language-markup">
+&lt;div id=&quot;step-image&quot; class=&quot;step-image carousel slide&quot;&gt;
+  &lt;!-- Indicators --&gt;
+  &lt;ol class=&quot;carousel-indicators&quot;&gt;
+    &lt;li data-target=&quot;#step-image&quot; data-slide-to=&quot;0&quot; class=&quot;active&quot;&gt;&lt;/li&gt;
+    &lt;li data-target=&quot;#step-image&quot; data-slide-to=&quot;1&quot;&gt;&lt;/li&gt;
+    &lt;li data-target=&quot;#step-image&quot; data-slide-to=&quot;2&quot;&gt;&lt;/li&gt;
+    &lt;li data-target=&quot;#step-image&quot; data-slide-to=&quot;3&quot;&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+
+  &lt;!-- Wrapper for slides --&gt;
+  &lt;div class=&quot;carousel-inner&quot; role=&quot;listbox&quot;&gt;
+    &lt;div class=&quot;item active&quot;&gt;
+      &lt;img src=&quot;assets/img/step1.png&quot; alt=&quot;&quot;&gt;
+      &lt;div class=&quot;carousel-caption&quot;&gt;
+        &lt;h4&gt;Placing your cursor&lt;/h4&gt;
+        &lt;p&gt;In order to add an image to your page or post, you must first insert your cursor in the place in the text where you want the image to appear. By placing your cursor within your text, you can add images inline with your content. You can also place your cursor on a blank line if you want the image to appear by itself instead.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;item&quot;&gt;
+      &lt;img src=&quot;assets/img/step2.png&quot; alt=&quot;&quot;&gt;
+      &lt;div class=&quot;carousel-caption&quot;&gt;
+        &lt;h4&gt;Click the Add Media button&lt;/h4&gt;
+        &lt;p&gt;...&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;item&quot;&gt;
+      &lt;img src=&quot;assets/img/step3.png&quot; alt=&quot;&quot;&gt;
+      &lt;div class=&quot;carousel-caption&quot;&gt;
+        &lt;h4&gt;Add or Select Your Image&lt;/h4&gt;
+        &lt;div&gt;...&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;item&quot;&gt;
+      &lt;img src=&quot;assets/img/step4.png&quot; alt=&quot;&quot;&gt;
+      &lt;div class=&quot;carousel-caption&quot;&gt;
+        &lt;h4&gt;Attachment Details&lt;/h4&gt;
+        &lt;p&gt;...&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    
+  &lt;/div&gt;
+
+  &lt;!-- Controls --&gt;
+  &lt;a class=&quot;left carousel-control&quot; href=&quot;#step-image&quot; role=&quot;button&quot; data-slide=&quot;prev&quot;&gt;
+    &lt;i class=&quot;fa fa-angle-left&quot;&gt;&lt;/i&gt;
+  &lt;/a&gt;
+  &lt;a class=&quot;right carousel-control&quot; href=&quot;#step-image&quot; role=&quot;button&quot; data-slide=&quot;next&quot;&gt;
+    &lt;i class=&quot;fa fa-angle-right&quot;&gt;&lt;/i&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+          </div>
+
+
+
+        </div>
+      </section>
+      <!-- END Section - Steps -->
+
+      <!-- Section - Featured box -->
+      <section id="sec-featured-box">
+        <div class="container">
+          <header class="section-header">
+            <span>Promo box</span>
+            <h2>Featured box</h2>
+            <p>Present key features of your product in overview page</p>
+          </header>
+
+          <h3>Iconic</h3>
+          <p>Here's some examples that uses icon in feature boxes.</p>
+
+          <h4>Default</h4>
+          <div class="code-window">
+            <div class="code-preview">
+
+              <ul class="features">
+                <li>
+                  <div class="icon"><i class="fa fa-mobile"></i></div>
+                  <h5>Responsive</h5>
+                  <p>Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.</p>
+                </li>
+
+                <li>
+                  <div class="icon"><i class="fa fa-cog"></i></div>
+                  <h5>Customizable</h5>
+                  <p>Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.</p>
+                </li>
+
+                <li>
+                  <div class="icon"><i class="fa fa-code"></i></div>
+                  <h5>Full of features</h5>
+                  <p>Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.</p>
+                </li>
+              </ul>
+
+            </div>
+
+<pre class="line-numbers"><code class="language-markup">
+&lt;ul class=&quot;features&quot;&gt;
+  &lt;li&gt;
+    &lt;div class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-mobile&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+    &lt;h5&gt;Responsive&lt;/h5&gt;
+    &lt;p&gt;Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.&lt;/p&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;div class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-cog&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+    &lt;h5&gt;Customizable&lt;/h5&gt;
+    &lt;p&gt;Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.&lt;/p&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;div class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-code&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+    &lt;h5&gt;Full of features&lt;/h5&gt;
+    &lt;p&gt;Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+          </div>
+
+
+          <h4>Round</h4>
+          <p>Adding <code>.icon-round</code> to the <code>.features</code> tag.</p>
+          <div class="code-window">
+            <div class="code-preview">
+
+              <ul class="features icon-round">
+                <li>
+                  <div class="icon"><i class="fa fa-mobile"></i></div>
+                  <h5>Responsive</h5>
+                  <p>Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.</p>
+                </li>
+
+                <li>
+                  <div class="icon"><i class="fa fa-cog"></i></div>
+                  <h5>Customizable</h5>
+                  <p>Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.</p>
+                </li>
+
+                <li>
+                  <div class="icon"><i class="fa fa-code"></i></div>
+                  <h5>Full of features</h5>
+                  <p>Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.</p>
+                </li>
+              </ul>
+
+            </div>
+
+<pre class="line-numbers"><code class="language-markup">
+&lt;ul class=&quot;features icon-round&quot;&gt;
+  &lt;li&gt;
+    &lt;div class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-mobile&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+    &lt;h5&gt;Responsive&lt;/h5&gt;
+    &lt;p&gt;Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.&lt;/p&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;div class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-cog&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+    &lt;h5&gt;Customizable&lt;/h5&gt;
+    &lt;p&gt;Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.&lt;/p&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;div class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-code&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+    &lt;h5&gt;Full of features&lt;/h5&gt;
+    &lt;p&gt;Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+          </div>
+
+
+          <h4>Sided</h4>
+          <p>Adding <code>.icon-sided</code> to the <code>.features</code> tag.</p>
+          <div class="code-window">
+            <div class="code-preview">
+
+              <ul class="features icon-sided">
+                <li>
+                  <div class="icon"><i class="fa fa-mobile"></i></div>
+                  <h5>Responsive</h5>
+                  <p>Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.</p>
+                </li>
+
+                <li>
+                  <div class="icon"><i class="fa fa-cog"></i></div>
+                  <h5>Customizable</h5>
+                  <p>Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.</p>
+                </li>
+
+                <li>
+                  <div class="icon"><i class="fa fa-code"></i></div>
+                  <h5>Full of features</h5>
+                  <p>Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.</p>
+                </li>
+              </ul>
+
+            </div>
+
+<pre class="line-numbers"><code class="language-markup">
+&lt;ul class=&quot;features icon-sided&quot;&gt;
+  &lt;li&gt;
+    &lt;div class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-mobile&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+    &lt;h5&gt;Responsive&lt;/h5&gt;
+    &lt;p&gt;Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.&lt;/p&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;div class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-cog&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+    &lt;h5&gt;Customizable&lt;/h5&gt;
+    &lt;p&gt;Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.&lt;/p&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;div class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-code&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+    &lt;h5&gt;Full of features&lt;/h5&gt;
+    &lt;p&gt;Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+          </div>
+
+
+          <div class="callout callout-info" role="alert">
+            <h4>Change color</h4>
+            <p>You can easily change fore-color or background-color of icons using <code>.txt-*</code> and <code>.bg-*</code> classes which described in <a href="css.html#sec-typography">typography</a> section.</p>
+          </div>
+
+
+          <h3>Image</h3>
+          <p>It's possible to use an image instead of icons. You need to add <code>.icon-image</code> class. Check samples.</p>
+          <div class="code-window">
+            <div class="code-preview">
+
+              <ul class="features icon-image">
+                <li>
+                  <div class="icon"><img src="assets/img/placeholder.png" alt="placeholder"></div>
+                  <h5>Responsive</h5>
+                  <p>Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.</p>
+                </li>
+
+                <li>
+                  <div class="icon"><img src="assets/img/placeholder.png" alt="placeholder"></div>
+                  <h5>Customizable</h5>
+                  <p>Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.</p>
+                </li>
+
+                <li>
+                  <div class="icon"><img src="assets/img/placeholder.png" alt="placeholder"></div>
+                  <h5>Full of features</h5>
+                  <p>Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.</p>
+                </li>
+              </ul>
+
+            </div>
+
+<pre class="line-numbers"><code class="language-markup">
+&lt;ul class=&quot;features icon-image&quot;&gt;
+  &lt;li&gt;
+    &lt;div class=&quot;icon&quot;&gt;&lt;img src=&quot;assets/img/placeholder.png&quot; alt=&quot;placeholder&quot;&gt;&lt;/div&gt;
+    &lt;h5&gt;Responsive&lt;/h5&gt;
+    &lt;p&gt;Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.&lt;/p&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;div class=&quot;icon&quot;&gt;&lt;img src=&quot;assets/img/placeholder.png&quot; alt=&quot;placeholder&quot;&gt;&lt;/div&gt;
+    &lt;h5&gt;Customizable&lt;/h5&gt;
+    &lt;p&gt;Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.&lt;/p&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;div class=&quot;icon&quot;&gt;&lt;img src=&quot;assets/img/placeholder.png&quot; alt=&quot;placeholder&quot;&gt;&lt;/div&gt;
+    &lt;h5&gt;Full of features&lt;/h5&gt;
+    &lt;p&gt;Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+          </div>
+
+          <h4>With border</h4>
+          <div class="code-window">
+            <div class="code-preview">
+
+              <ul class="features icon-image">
+                <li>
+                  <div class="icon"><img class="img-thumbnail" src="assets/img/placeholder.png" alt="placeholder"></div>
+                  <h5>Responsive</h5>
+                  <p>Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.</p>
+                </li>
+
+                <li>
+                  <div class="icon"><img class="img-thumbnail" src="assets/img/placeholder.png" alt="placeholder"></div>
+                  <h5>Customizable</h5>
+                  <p>Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.</p>
+                </li>
+
+                <li>
+                  <div class="icon"><img class="img-thumbnail" src="assets/img/placeholder.png" alt="placeholder"></div>
+                  <h5>Full of features</h5>
+                  <p>Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.</p>
+                </li>
+              </ul>
+
+            </div>
+
+<pre class="line-numbers"><code class="language-markup">
+&lt;ul class=&quot;features icon-image&quot;&gt;
+  &lt;li&gt;
+    &lt;div class=&quot;icon&quot;&gt;&lt;img class=&quot;img-thumbnail&quot; src=&quot;assets/img/placeholder.png&quot; alt=&quot;placeholder&quot;&gt;&lt;/div&gt;
+    &lt;h5&gt;Responsive&lt;/h5&gt;
+    &lt;p&gt;Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.&lt;/p&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;div class=&quot;icon&quot;&gt;&lt;img class=&quot;img-thumbnail&quot; src=&quot;assets/img/placeholder.png&quot; alt=&quot;placeholder&quot;&gt;&lt;/div&gt;
+    &lt;h5&gt;Customizable&lt;/h5&gt;
+    &lt;p&gt;Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.&lt;/p&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;div class=&quot;icon&quot;&gt;&lt;img class=&quot;img-thumbnail&quot; src=&quot;assets/img/placeholder.png&quot; alt=&quot;placeholder&quot;&gt;&lt;/div&gt;
+    &lt;h5&gt;Full of features&lt;/h5&gt;
+    &lt;p&gt;Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+          </div>
+
+
+          <h3>Action button</h3>
+          <p>You may need to use a button with a feature.</p>
+
+          <div class="code-window">
+            <div class="code-preview">
+
+              <ul class="features">
+                <li>
+                  <h5>Responsive</h5>
+                  <p>Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.</p>
+                  <a class="btn" href="#">Learn more</a>
+                </li>
+
+                <li>
+                  <h5>Customizable</h5>
+                  <p>Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.</p>
+                  <a class="btn" href="#">Learn more</a>
+                </li>
+
+                <li>
+                  <h5>Full of features</h5>
+                  <p>Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.</p>
+                  <a class="btn" href="#">Learn more</a>
+                </li>
+              </ul>
+
+            </div>
+
+<pre class="line-numbers"><code class="language-markup">
+&lt;ul class=&quot;features&quot;&gt;
+  &lt;li&gt;
+    &lt;h5&gt;Responsive&lt;/h5&gt;
+    &lt;p&gt;Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.&lt;/p&gt;
+    &lt;a class=&quot;btn&quot; href=&quot;#&quot;&gt;Learn more&lt;/a&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;h5&gt;Customizable&lt;/h5&gt;
+    &lt;p&gt;Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.&lt;/p&gt;
+    &lt;a class=&quot;btn&quot; href=&quot;#&quot;&gt;Learn more&lt;/a&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;h5&gt;Full of features&lt;/h5&gt;
+    &lt;p&gt;Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.&lt;/p&gt;
+    &lt;a class=&quot;btn&quot; href=&quot;#&quot;&gt;Learn more&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+          </div>
+
+
+
+          <div class="code-window">
+            <div class="code-preview">
+
+              <ul class="features icon-image">
+                <li>
+                  <div class="icon"><img class="img-thumbnail" src="assets/img/placeholder.png" alt="placeholder"></div>
+                  <h5>Responsive</h5>
+                  <p>Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.</p>
+                  <a class="btn" href="#">Learn more</a>
+                </li>
+
+                <li>
+                  <div class="icon"><img class="img-thumbnail" src="assets/img/placeholder.png" alt="placeholder"></div>
+                  <h5>Customizable</h5>
+                  <p>Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.</p>
+                  <a class="btn" href="#">Learn more</a>
+                </li>
+
+                <li>
+                  <div class="icon"><img class="img-thumbnail" src="assets/img/placeholder.png" alt="placeholder"></div>
+                  <h5>Full of features</h5>
+                  <p>Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.</p>
+                  <a class="btn" href="#">Learn more</a>
+                </li>
+              </ul>
+
+            </div>
+
+<pre class="line-numbers"><code class="language-markup">
+&lt;ul class=&quot;features icon-image&quot;&gt;
+  &lt;li&gt;
+    &lt;div class=&quot;icon&quot;&gt;&lt;img class=&quot;img-thumbnail&quot; src=&quot;assets/img/placeholder.png&quot; alt=&quot;placeholder&quot;&gt;&lt;/div&gt;
+    &lt;h5&gt;Responsive&lt;/h5&gt;
+    &lt;p&gt;Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.&lt;/p&gt;
+    &lt;a class=&quot;btn&quot; href=&quot;#&quot;&gt;Learn more&lt;/a&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;div class=&quot;icon&quot;&gt;&lt;img class=&quot;img-thumbnail&quot; src=&quot;assets/img/placeholder.png&quot; alt=&quot;placeholder&quot;&gt;&lt;/div&gt;
+    &lt;h5&gt;Customizable&lt;/h5&gt;
+    &lt;p&gt;Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.&lt;/p&gt;
+    &lt;a class=&quot;btn&quot; href=&quot;#&quot;&gt;Learn more&lt;/a&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;div class=&quot;icon&quot;&gt;&lt;img class=&quot;img-thumbnail&quot; src=&quot;assets/img/placeholder.png&quot; alt=&quot;placeholder&quot;&gt;&lt;/div&gt;
+    &lt;h5&gt;Full of features&lt;/h5&gt;
+    &lt;p&gt;Donec efficitur mi a velit tincidunt, sit amet accumsan nibh congue. Aliquam convallis molestie ligula.&lt;/p&gt;
+    &lt;a class=&quot;btn&quot; href=&quot;#&quot;&gt;Learn more&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+          </div>
+
+
+          <br><br>
+          <div class="callout callout-info" role="alert">
+            <h4>Column number</h4>
+            <p>You can change number of columns by adding either <code>.cols-1</code> or <code>.cols-2</code> to the <code>.features</code> tag.</p>
+          </div>
+
+
+
+        </div>
+      </section>
+      <!-- END Section - Featured box -->
+
+      <!-- Section - Tabs -->
+      <section id="sec-tab">
+        <div class="container">
+          <header class="section-header">
+            <span>Content switcher</span>
+            <h2>Tabs</h2>
+            <p>Add quick, dynamic tab functionality to transition through panes of local content</p>
+          </header>
+
+
+          <h3>Text tabs</h3>
+          <p>The simplest way to create a tab element.</p>
+
+          <div class="code-window">
+            <div class="code-preview">
+
+              <div class="tabs tabs-text">
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                  <li role="presentation" class="active">
+                    <a href="#home1" aria-controls="home1" role="tab" data-toggle="tab">Home</a>
+                  </li>
+                  <li role="presentation">
+                    <a href="#profile1" aria-controls="profile1" role="tab" data-toggle="tab">Profile</a>
+                  </li>
+                  <li role="presentation">
+                    <a href="#messages1" aria-controls="messages1" role="tab" data-toggle="tab">Messages</a>
+                  </li>
+                  <li role="presentation">
+                    <a href="#settings1" aria-controls="settings1" role="tab" data-toggle="tab"><i class="fa fa-cogs"></i> Settings</a>
+                  </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane active fade in" id="home1">
+                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="profile1">
+                    <p>No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="messages1">
+                    <p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it?</p>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="settings1">
+                    <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.</p>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+<pre class="line-numbers"><code class="language-markup">
+&lt;div class=&quot;tabs tabs-text&quot;&gt;
+
+  &lt;!-- Nav tabs --&gt;
+  &lt;ul class=&quot;nav nav-tabs&quot; role=&quot;tablist&quot;&gt;
+    &lt;li role=&quot;presentation&quot; class=&quot;active&quot;&gt;
+      &lt;a href=&quot;#home1&quot; aria-controls=&quot;home1&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;Home&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li role=&quot;presentation&quot;&gt;
+      &lt;a href=&quot;#profile1&quot; aria-controls=&quot;profile1&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;Profile&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li role=&quot;presentation&quot;&gt;
+      &lt;a href=&quot;#messages1&quot; aria-controls=&quot;messages1&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;Messages&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li role=&quot;presentation&quot;&gt;
+      &lt;a href=&quot;#settings1&quot; aria-controls=&quot;settings1&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;&lt;i class=&quot;fa fa-cogs&quot;&gt;&lt;/i&gt; Settings&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;!-- Tab panes --&gt;
+  &lt;div class=&quot;tab-content&quot;&gt;
+    &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane active fade in&quot; id=&quot;home1&quot;&gt;...&lt;/div&gt;
+    &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade&quot; id=&quot;profile1&quot;&gt;...&lt;/div&gt;
+    &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade&quot; id=&quot;messages1&quot;&gt;...&lt;/div&gt;
+    &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade&quot; id=&quot;settings1&quot;&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;
+</code></pre>
+          </div>
+
+          <h4>Alignment</h4>
+          <p>Add <code>.text-center</code> or <code>.text-right</code> to the <code>ul.nav</code> to change the position of tabs.</p>
+
+          <div class="code-window">
+            <div class="code-preview">
+
+              <div class="tabs tabs-text">
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs text-right" role="tablist">
+                  <li role="presentation" class="active">
+                    <a href="#home3" aria-controls="home3" role="tab" data-toggle="tab">Home</a>
+                  </li>
+                  <li role="presentation">
+                    <a href="#profile3" aria-controls="profile3" role="tab" data-toggle="tab">Profile</a>
+                  </li>
+                  <li role="presentation">
+                    <a href="#messages3" aria-controls="messages3" role="tab" data-toggle="tab">Messages</a>
+                  </li>
+                  <li role="presentation">
+                    <a href="#settings3" aria-controls="settings3" role="tab" data-toggle="tab"><i class="fa fa-cogs"></i> Settings</a>
+                  </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane active fade in" id="home3">
+                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="profile3">
+                    <p>No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="messages3">
+                    <p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it?</p>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="settings3">
+                    <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.</p>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+<pre class="line-numbers"><code class="language-markup">
+&lt;div class=&quot;tabs tabs-text&quot;&gt;
+
+  &lt;!-- Nav tabs --&gt;
+  &lt;ul class=&quot;nav nav-tabs text-right&quot; role=&quot;tablist&quot;&gt;
+    &lt;li role=&quot;presentation&quot; class=&quot;active&quot;&gt;
+      &lt;a href=&quot;#home3&quot; aria-controls=&quot;home3&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;Home&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li role=&quot;presentation&quot;&gt;
+      &lt;a href=&quot;#profile3&quot; aria-controls=&quot;profile3&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;Profile&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li role=&quot;presentation&quot;&gt;
+      &lt;a href=&quot;#messages3&quot; aria-controls=&quot;messages3&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;Messages&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li role=&quot;presentation&quot;&gt;
+      &lt;a href=&quot;#settings3&quot; aria-controls=&quot;settings3&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;&lt;i class=&quot;fa fa-cogs&quot;&gt;&lt;/i&gt; Settings&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;!-- Tab panes --&gt;
+  &lt;div class=&quot;tab-content&quot;&gt;
+    &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane active fade in&quot; id=&quot;home3&quot;&gt;...&lt;/div&gt;
+    &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade&quot; id=&quot;profile3&quot;&gt;...&lt;/div&gt;
+    &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade&quot; id=&quot;messages3&quot;&gt;...&lt;/div&gt;
+    &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade&quot; id=&quot;settings3&quot;&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+</code></pre>
+          </div>
+
+
+
+          <h3>Big icon tabs</h3>
+
+          <div class="code-window">
+            <div class="code-preview">
+
+              <div class="tabs tabs-icon">
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs text-center" role="tablist">
+                  <li role="presentation" class="active">
+                    <a href="#home2" aria-controls="home2" role="tab" data-toggle="tab">
+                      <i class="fa fa-home"></i>
+                      <span>Home</span>
+                    </a>
+                  </li>
+                  <li role="presentation">
+                    <a href="#profile2" aria-controls="profile2" role="tab" data-toggle="tab">
+                      <i class="fa fa-user"></i>
+                      <span>Profile</span>
+                    </a>
+                  </li>
+                  <li role="presentation">
+                    <a href="#messages2" aria-controls="messages2" role="tab" data-toggle="tab">
+                      <i class="fa fa-comment-o"></i>
+                      <span>Messages</span>
+                    </a>
+                  </li>
+                  <li role="presentation">
+                    <a href="#settings2" aria-controls="settings2" role="tab" data-toggle="tab">
+                      <i class="fa fa-cogs"></i>
+                      <span>Settings</span>
+                    </a>
+                  </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane active fade in" id="home2">
+                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="profile2">
+                    <p>No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="messages2">
+                    <p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it?</p>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="settings2">
+                    <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.</p>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+<pre class="line-numbers"><code class="language-markup">
+&lt;div class=&quot;tabs tabs-icon&quot;&gt;
+
+  &lt;!-- Nav tabs --&gt;
+  &lt;ul class=&quot;nav nav-tabs text-center&quot; role=&quot;tablist&quot;&gt;
+    &lt;li role=&quot;presentation&quot; class=&quot;active&quot;&gt;
+      &lt;a href=&quot;#home2&quot; aria-controls=&quot;home2&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;
+        &lt;i class=&quot;fa fa-home&quot;&gt;&lt;/i&gt;
+        &lt;span&gt;Home&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li role=&quot;presentation&quot;&gt;
+      &lt;a href=&quot;#profile2&quot; aria-controls=&quot;profile2&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;
+        &lt;i class=&quot;fa fa-user&quot;&gt;&lt;/i&gt;
+        &lt;span&gt;Profile&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li role=&quot;presentation&quot;&gt;
+      &lt;a href=&quot;#messages2&quot; aria-controls=&quot;messages2&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;
+        &lt;i class=&quot;fa fa-comment-o&quot;&gt;&lt;/i&gt;
+        &lt;span&gt;Messages&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li role=&quot;presentation&quot;&gt;
+      &lt;a href=&quot;#settings2&quot; aria-controls=&quot;settings2&quot; role=&quot;tab&quot; data-toggle=&quot;tab&quot;&gt;
+        &lt;i class=&quot;fa fa-cogs&quot;&gt;&lt;/i&gt;
+        &lt;span&gt;Settings&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;!-- Tab panes --&gt;
+  &lt;div class=&quot;tab-content&quot;&gt;
+    &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane active fade in&quot; id=&quot;home2&quot;&gt;...&lt;/div&gt;
+    &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade&quot; id=&quot;profile2&quot;&gt;...&lt;/div&gt;
+    &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade&quot; id=&quot;messages2&quot;&gt;...&lt;/div&gt;
+    &lt;div role=&quot;tabpanel&quot; class=&quot;tab-pane fade&quot; id=&quot;settings2&quot;&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;
+</code></pre>
+          </div>
+
+
+        </div>
+      </section>
+      <!-- END Section - Tabs -->
+
+      <!-- Section - Callout -->
+      <section id="sec-callout">
+        <div class="container">
+          <header class="section-header">
+            <span>Alert</span>
+            <h2>Callout</h2>
+            <p>Provide contextual feedback messages for typical user actions</p>
+          </header>
+
+          <div class="code-window">
+            <div class="code-preview">
+
+              <div class="callout callout-success" role="alert">
+                <h4>Well done!</h4>
+                <p>You successfully read this important alert message.</p>
+              </div>
+              <div class="callout callout-info" role="alert">
+                <h4>Heads up!</h4>
+                <p>This alert needs your attention, but it's not super important.</p>
+              </div>
+              <div class="callout callout-warning" role="alert">
+                <h4>Warning!</h4>
+                <p>Better check yourself, you're <a href="#">not looking too good</a>.</p>
+              </div>
+              <div class="callout callout-danger" role="alert">
+                <h4>Oh snap!</h4>
+                <p><a href="#">Change a few things up</a> and try submitting again.</p>
+              </div>
+
+            </div>
+
+<pre class="line-numbers"><code class="language-markup">
+&lt;div class=&quot;callout callout-success&quot; role=&quot;alert&quot;&gt;
+  &lt;h4&gt;Well done!&lt;/h4&gt;
+  &lt;p&gt;You successfully read this important alert message.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;callout callout-info&quot; role=&quot;alert&quot;&gt;
+  &lt;h4&gt;Heads up!&lt;/h4&gt;
+  &lt;p&gt;This alert needs your attention, but it's not super important.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;callout callout-warning&quot; role=&quot;alert&quot;&gt;
+  &lt;h4&gt;Warning!&lt;/h4&gt;
+  &lt;p&gt;Better check yourself, you're &lt;a href=&quot;#&quot;&gt;not looking too good&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;callout callout-danger&quot; role=&quot;alert&quot;&gt;
+  &lt;h4&gt;Oh snap!&lt;/h4&gt;
+  &lt;p&gt;&lt;a href=&quot;#&quot;&gt;Change a few things up&lt;/a&gt; and try submitting again.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+          </div>
+
+        </div>
+      </section>
+      <!-- END Section - Callout -->
+
+      <!-- Section - File tree -->
+      <section id="sec-file-tree">
+        <div class="container">
+          <header class="section-header">
+            <span>Included files</span>
+            <h2>File tree</h2>
+            <p>Provide some description for each file and folder inside your package</p>
+          </header>
+
+
+          <div class="code-window">
+            <div class="code-preview">
+
+            <div class="file-tree">
+              <ul>
+                <li class="is-folder open">
+                  <span>css</span>
+                  <i>some description about the folder</i>
+                  <ul>
+                    <li class="is-file">
+                      <span>custom.css</span>
+                      <i>some description about the file</i>
+                    </li>
+                    <li class="is-file">
+                      <span>theDocs.css</span>
+                      <i>some description about the file</i>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="is-folder">
+                  <span>fonts</span>
+                  <i>some description about the folder</i>
+                  <ul>
+                    <li class="is-file">
+                      <span>fontawesome-webfont.eot</span>
+                      <i>some description about the file</i>
+                    </li>
+                    <li class="is-file">
+                      <span>fontawesome-webfont.svg</span>
+                      <i>some description about the file</i>
+                    </li>
+                    <li class="is-file">
+                      <span>fontawesome-webfont.ttf</span>
+                      <i>some description about the file</i>
+                    </li>
+                    <li class="is-file">
+                      <span>fontawesome-webfont.woff</span>
+                      <i>some description about the file</i>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="is-folder">
+                  <span>img</span>
+                  <i>some description about the folder</i>
+                  <ul>
+                    <li class="is-file">
+                      <span>placeholder.jpg</span>
+                      <i>some description about the file</i>
+                    </li>
+                    <li class="is-file">
+                      <span>logo.png</span>
+                      <i>some description about the file</i>
+                    </li>
+                    <li class="is-file">
+                      <span>sample-video.mp4</span>
+                      <i>some description about the file</i>
+                    </li>
+                    <li class="is-file">
+                      <span>ads.png</span>
+                      <i>some description about the file</i>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="is-folder">
+                  <span>vendors</span>
+                  <i>some description about the folder</i>
+                  <ul>
+                    <li class="is-folder">
+                      <span>jQuery</span>
+                      <i>some description about the file</i>
+                      <ul>
+                        <li class="is-file">
+                          <span>jquery.js</span>
+                          <i>some description about the file</i>
+                        </li>
+                        <li class="is-file">
+                          <span>jquery.min.js</span>
+                          <i>some description about the file</i>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="is-folder">
+                      <span>Bootstrap</span>
+                      <i>some description about the file</i>
+                      <ul>
+                        <li class="is-folder">
+                          <span>css</span>
+                          <i>some description about the folder</i>
+                        </li>
+                        <li class="is-folder">
+                          <span>fonts</span>
+                          <i>some description about the folder</i>
+                        </li>
+                        <li class="is-folder">
+                          <span>js</span>
+                          <i>some description about the folder</i>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="is-folder">
+                      <span>MediaElement</span>
+                      <i>some description about the file</i>
+                    </li>
+
+                    <li class="is-folder">
+                      <span>Prism</span>
+                      <i>some description about the file</i>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="is-file">
+                  <span>index.html</span>
+                  <i>some description about the file</i>
+                </li>
+                <li class="is-file">
+                  <span>dashboard.html</span>
+                  <i>some description about the file</i>
+                </li>
+                <li class="is-file">
+                  <span>starter.html</span>
+                  <i>some description about the file</i>
+                </li>
+              </ul>
+            </div>
+
+            </div>
+
+<pre class="line-numbers"><code class="language-markup">
+&lt;div class=&quot;file-tree&quot;&gt;
+  &lt;ul&gt;
+    &lt;li class=&quot;is-folder open&quot;&gt;
+      &lt;span&gt;css&lt;/span&gt;
+      &lt;i&gt;some description about the folder&lt;/i&gt;
+      &lt;ul&gt;
+        &lt;li class=&quot;is-file&quot;&gt;
+          &lt;span&gt;custom.css&lt;/span&gt;
+          &lt;i&gt;some description about the file&lt;/i&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;is-file&quot;&gt;
+          &lt;span&gt;theDocs.css&lt;/span&gt;
+          &lt;i&gt;some description about the file&lt;/i&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+
+    &lt;li class=&quot;is-folder&quot;&gt;
+      &lt;span&gt;fonts&lt;/span&gt;
+      &lt;i&gt;some description about the folder&lt;/i&gt;
+      &lt;ul&gt;
+        &lt;li class=&quot;is-file&quot;&gt;
+          &lt;span&gt;fontawesome-webfont.eot&lt;/span&gt;
+          &lt;i&gt;some description about the file&lt;/i&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;is-file&quot;&gt;
+          &lt;span&gt;fontawesome-webfont.svg&lt;/span&gt;
+          &lt;i&gt;some description about the file&lt;/i&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;is-file&quot;&gt;
+          &lt;span&gt;fontawesome-webfont.ttf&lt;/span&gt;
+          &lt;i&gt;some description about the file&lt;/i&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;is-file&quot;&gt;
+          &lt;span&gt;fontawesome-webfont.woff&lt;/span&gt;
+          &lt;i&gt;some description about the file&lt;/i&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+
+    &lt;li class=&quot;is-folder&quot;&gt;
+      &lt;span&gt;img&lt;/span&gt;
+      &lt;i&gt;some description about the folder&lt;/i&gt;
+      &lt;ul&gt;
+        &lt;li class=&quot;is-file&quot;&gt;
+          &lt;span&gt;placeholder.jpg&lt;/span&gt;
+          &lt;i&gt;some description about the file&lt;/i&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;is-file&quot;&gt;
+          &lt;span&gt;logo.png&lt;/span&gt;
+          &lt;i&gt;some description about the file&lt;/i&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;is-file&quot;&gt;
+          &lt;span&gt;sample-video.mp4&lt;/span&gt;
+          &lt;i&gt;some description about the file&lt;/i&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;is-file&quot;&gt;
+          &lt;span&gt;ads.png&lt;/span&gt;
+          &lt;i&gt;some description about the file&lt;/i&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+
+    &lt;li class=&quot;is-folder&quot;&gt;
+      &lt;span&gt;vendors&lt;/span&gt;
+      &lt;i&gt;some description about the folder&lt;/i&gt;
+      &lt;ul&gt;
+        &lt;li class=&quot;is-folder&quot;&gt;
+          &lt;span&gt;jQuery&lt;/span&gt;
+          &lt;i&gt;some description about the file&lt;/i&gt;
+          &lt;ul&gt;
+            &lt;li class=&quot;is-file&quot;&gt;
+              &lt;span&gt;jquery.js&lt;/span&gt;
+              &lt;i&gt;some description about the file&lt;/i&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;is-file&quot;&gt;
+              &lt;span&gt;jquery.min.js&lt;/span&gt;
+              &lt;i&gt;some description about the file&lt;/i&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+
+        &lt;li class=&quot;is-folder&quot;&gt;
+          &lt;span&gt;Bootstrap&lt;/span&gt;
+          &lt;i&gt;some description about the file&lt;/i&gt;
+          &lt;ul&gt;
+            &lt;li class=&quot;is-folder&quot;&gt;
+              &lt;span&gt;css&lt;/span&gt;
+              &lt;i&gt;some description about the folder&lt;/i&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;is-folder&quot;&gt;
+              &lt;span&gt;fonts&lt;/span&gt;
+              &lt;i&gt;some description about the folder&lt;/i&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;is-folder&quot;&gt;
+              &lt;span&gt;js&lt;/span&gt;
+              &lt;i&gt;some description about the folder&lt;/i&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+
+        &lt;li class=&quot;is-folder&quot;&gt;
+          &lt;span&gt;MediaElement&lt;/span&gt;
+          &lt;i&gt;some description about the file&lt;/i&gt;
+        &lt;/li&gt;
+
+        &lt;li class=&quot;is-folder&quot;&gt;
+          &lt;span&gt;Prism&lt;/span&gt;
+          &lt;i&gt;some description about the file&lt;/i&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+
+    &lt;li class=&quot;is-file&quot;&gt;
+      &lt;span&gt;index.html&lt;/span&gt;
+      &lt;i&gt;some description about the file&lt;/i&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;is-file&quot;&gt;
+      &lt;span&gt;dashboard.html&lt;/span&gt;
+      &lt;i&gt;some description about the file&lt;/i&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;is-file&quot;&gt;
+      &lt;span&gt;starter.html&lt;/span&gt;
+      &lt;i&gt;some description about the file&lt;/i&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+          </div>
+
+            <div class="callout callout-info" role="alert">
+              <h4>Default open folder</h4>
+              <p>To make a folder expanded by default, add <code>.open</code> class to your desire <code>li.is-folder</code> tag.</p>
+            </div>
+
+
+        </div>
+      </section>
+      <!-- END Section - File tree -->
+
+      <!-- Section - Video -->
+      <section id="sec-video">
+        <div class="container">
+          <header class="section-header">
+            <span>Media</span>
+            <h2>Video</h2>
+            <p>Adding a video to your page from any source</p>
+          </header>
+
+          <h3>Youtube</h3>
+          <p>Place embed code inside a <code>.video</code> tag.</p>
+          <div class="code-splitted">
+            <div class="code-group col-md-6">
+<pre class="line-numbers"><code class="language-markup">
+&lt;div class=&quot;video&quot;&gt;
+  &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/hQfNtnKm5nA&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+
+            <div class="code-preview col-md-6">
+              <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/hQfNtnKm5nA" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+
+
+          <h3>Vimeo</h3>
+          <p>Place embed code inside a <code>.video</code> tag.</p>
+          <div class="code-splitted">
+            <div class="code-group col-md-6">
+<pre class="line-numbers"><code class="language-markup">
+&lt;div class=&quot;video&quot;&gt;
+  &lt;iframe src=&quot;https://player.vimeo.com/video/127738920&quot; width=&quot;500&quot; height=&quot;281&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+
+            <div class="code-preview col-md-6">
+              <div class="video">
+                <iframe src="https://player.vimeo.com/video/127738920" width="500" height="281" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+
+
+          <h3>Self-hosted</h3>
+          <p>There're two way to show your self-hosted videos in your documentation.</p>
+
+          <h4>Browser player</h4>
+          <p>In this way you'll use default player of the browser. Don't forget to add <code>width="100%"</code> and <code>height="100%"</code> attributes in this way.</p>
+          <div class="code-splitted">
+            <div class="code-group col-md-6">
+<pre class="line-numbers"><code class="language-markup">
+&lt;div class=&quot;video&quot;&gt;
+  &lt;video src=&quot;assets/img/video.mp4&quot; width=&quot;100%&quot; height=&quot;100%&quot; controls&gt;&lt;/video&gt;
+&lt;/div&gt;
+
+&lt;!-- OR --&gt;
+
+&lt;div class=&quot;video&quot;&gt;
+  &lt;video width=&quot;100%&quot; height=&quot;100%&quot; controls&gt;
+    &lt;source src=&quot;assets/img/video.mp4&quot; type=&quot;video/mp4&quot;&gt;
+    &lt;source src=&quot;assets/img/video.webm&quot; type=&quot;video/webm&quot;&gt;
+  &lt;/video&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+
+            <div class="code-preview col-md-6">
+              <div class="video">
+                <video src="assets/img/video.mp4" width="100%" height="100%" controls></video>
+              </div>
+            </div>
+          </div>
+
+
+          <h4>Video-js player</h4>
+          <div class="row">
+            <div class="col-md-6">
+              <p>You're also able to use a consistent video player skin across all browsers using videojs.</p>
+              <p>Make sure you'll include requirements before app.min.css and app.min.js.</p>
+            </div>
+
+            <div class="col-md-6">
+              <div class="requirements">
+                <div class="css">&lt;link href="assets/vendors/videojs/video-js.min.css" rel="stylesheet"&gt;</div>
+                <div class="js">&lt;script src="assets/vendors/videojs/video.min.js"&gt;&lt;/script&gt;</div>
+              </div>
+            </div>
+          </div>
+
+          <br><br>
+
+          <div class="code-splitted">
+            <div class="code-group col-md-6">
+<pre class="line-numbers"><code class="language-markup">
+&lt;div class=&quot;videojs-container&quot;&gt;
+  &lt;video class=&quot;video-js&quot; controls preload=&quot;auto&quot; poster=&quot;assets/img/video-poster.png&quot; data-setup=&quot;{}&quot;&gt;
+    &lt;source src=&quot;assets/img/video.mp4&quot; type='video/mp4'&gt;
+    &lt;source src=&quot;assets/img/video.webm&quot; type='video/webm'&gt;
+  &lt;/video&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+
+            <div class="code-preview col-md-6">
+              <div class="videojs-container">
+                <video class="video-js" controls preload="auto" poster="assets/img/video-poster.png" data-setup="{}">
+                  <source src="assets/img/video.mp4" type='video/mp4'>
+                  <source src="assets/img/video.webm" type='video/webm'>
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <p>By default aspect ratio is 16-9, add <code>.ratio-4by3</code> to the <code>.videojs-container</code> to change it.</p>
+
+
+        </div>
+      </section>
+      <!-- END Section - Video -->
+
+      <!-- Section - Lightbox -->
+      <section id="sec-lightbox">
+        <div class="container">
+          <header class="section-header">
+            <span>Popup content</span>
+            <h2>Lightbox</h2>
+            <p>Show image, video, and maps in a distraction-free way</p>
+          </header>
+
+          <p>Implementing as easy as adding a <code>data-lity</code> attribute to your <code>&lt;a&gt;</code> tags.</p>
+
+          <div class="code-splitted">
+            <div class="code-group col-sm-8 col-md-9">
+<pre class="line-numbers"><code class="language-markup">
+&lt;a class=&quot;btn btn-block&quot; href=&quot;assets/img/video-poster.png&quot; data-lity&gt;Image&lt;/a&gt;
+&lt;a class=&quot;btn btn-block&quot; href=&quot;//www.youtube.com/watch?v=hQfNtnKm5nA&quot; data-lity&gt;iFrame Youtube&lt;/a&gt;
+&lt;a class=&quot;btn btn-block&quot; href=&quot;//vimeo.com/127738920&quot; data-lity&gt;iFrame Vimeo&lt;/a&gt;
+&lt;a class=&quot;btn btn-block&quot; href=&quot;//maps.google.com/maps?q=1600+Amphitheatre+Parkway,+Mountain+View,+CA&quot; data-lity&gt;Google Maps&lt;/a&gt;
+</code></pre>
+            </div>
+
+            <div class="code-preview col-sm-4 col-md-3">
+              <a class="btn btn-block" href="assets/img/video-poster.png" data-lity>Image</a>
+              <a class="btn btn-block" href="//www.youtube.com/watch?v=hQfNtnKm5nA" data-lity>iFrame Youtube</a>
+              <a class="btn btn-block" href="//vimeo.com/127738920" data-lity>iFrame Vimeo</a>
+              <a class="btn btn-block" href="//maps.google.com/maps?q=1600+Amphitheatre+Parkway,+Mountain+View,+CA" data-lity>Google Maps</a>
+            </div>
+          </div>
+
+
+
+        </div>
+      </section>
+      <!-- END Section - Lightbox -->
+
+      <!-- Section - Color palette -->
+      <section id="sec-color">
+        <div class="container">
+          <header class="section-header">
+            <span>Color varieties</span>
+            <h2>Color palette</h2>
+            <p>Comprise and show what colors are available for a component</p>
+          </header>
+
+          <h3>Circular</h3>
+          <p>By default, text color is white. You may need to change it based on your background-color and their contrast. You can use either classes or inline style to set background-colors.</p>
+
+          <div class="code-splitted">
+            <div class="code-group col-sm-6">
+<pre class="line-numbers"><code class="language-markup">
+&lt;ul class=&quot;color-palette-circular&quot;&gt;
+  &lt;li class=&quot;bg-purple&quot;&gt;.bg-purple&lt;/li&gt;
+  &lt;li class=&quot;bg-green&quot;&gt;.bg-green&lt;/li&gt;
+  &lt;li class=&quot;bg-blue&quot;&gt;.bg-blue&lt;/li&gt;
+  &lt;li style=&quot;background-color: #fe7c60&quot;&gt;#fe7c60&lt;/li&gt;
+  &lt;li style=&quot;background-color: #fe6060&quot;&gt;#fe6060&lt;/li&gt;
+  &lt;li style=&quot;background-color: #161b1f&quot;&gt;#161b1f&lt;/li&gt;
+  &lt;li class=&quot;bg-dark-light&quot;&gt;.bg-dark-light&lt;/li&gt;
+  &lt;li class=&quot;bg-dark-lighter&quot;&gt;.bg-dark-lighter&lt;/li&gt;
+  &lt;li class=&quot;bg-dark-lightest&quot;&gt;.bg-dark-lightest&lt;/li&gt;
+  &lt;li class=&quot;bg-gray txt-gray&quot;&gt;.bg-gray&lt;/li&gt;
+  &lt;li class=&quot;bg-gray-light txt-gray&quot;&gt;.bg-gray-light&lt;/li&gt;
+  &lt;li class=&quot;bg-gray-lighter txt-gray&quot;&gt;.bg-gray-lighter&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+            </div>
+
+            <div class="code-preview col-sm-6">
+              <ul class="color-palette-circular">
+                <li class="bg-purple">.bg-purple</li>
+                <li class="bg-green">.bg-green</li>
+                <li class="bg-blue">.bg-blue</li>
+                <li style="background-color: #fe7c60">#fe7c60</li>
+                <li style="background-color: #fe6060">#fe6060</li>
+                <li style="background-color: #161b1f">#161b1f</li>
+                <li class="bg-dark-light">.bg-dark-light</li>
+                <li class="bg-dark-lighter">.bg-dark-lighter</li>
+                <li class="bg-dark-lightest">.bg-dark-lightest</li>
+                <li class="bg-gray txt-gray">.bg-gray</li>
+                <li class="bg-gray-light txt-gray">.bg-gray-light</li>
+                <li class="bg-gray-lighter txt-gray">.bg-gray-lighter</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3>Stacked</h3>
+          <p>Just changing a class name!</p>
+
+          <div class="code-splitted">
+            <div class="code-group col-sm-8">
+<pre class="line-numbers"><code class="language-markup">
+&lt;ul class=&quot;color-palette-stacked&quot;&gt;
+  &lt;li style=&quot;background-color: #0D47A1&quot;&gt;#0D47A1&lt;/li&gt;
+  &lt;li style=&quot;background-color: #1565C0&quot;&gt;#1565C0&lt;/li&gt;
+  &lt;li style=&quot;background-color: #1976D2&quot;&gt;#1976D2&lt;/li&gt;
+  &lt;li style=&quot;background-color: #1E88E5&quot;&gt;#1E88E5&lt;/li&gt;
+  &lt;li style=&quot;background-color: #2196F3&quot;&gt;#2196F3&lt;/li&gt;
+  &lt;li style=&quot;background-color: #42A5F5&quot;&gt;#42A5F5&lt;/li&gt;
+  &lt;li style=&quot;background-color: #64B5F6&quot;&gt;#64B5F6&lt;/li&gt;
+  &lt;li style=&quot;background-color: #90CAF9&quot;&gt;#90CAF9&lt;/li&gt;
+  &lt;li style=&quot;background-color: #BBDEFB&quot;&gt;#BBDEFB&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+            </div>
+
+            <div class="code-preview col-sm-4">
+              <ul class="color-palette-stacked">
+                <li style="background-color: #0D47A1">#0D47A1</li>
+                <li style="background-color: #1565C0">#1565C0</li>
+                <li style="background-color: #1976D2">#1976D2</li>
+                <li style="background-color: #1E88E5">#1E88E5</li>
+                <li style="background-color: #2196F3">#2196F3</li>
+                <li style="background-color: #42A5F5">#42A5F5</li>
+                <li style="background-color: #64B5F6">#64B5F6</li>
+                <li style="background-color: #90CAF9">#90CAF9</li>
+                <li style="background-color: #BBDEFB">#BBDEFB</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <!-- END Section - Color palette -->
+
+      <!-- Section - Requirements -->
+      <section id="sec-req">
+        <div class="container">
+          <header class="section-header">
+            <span>Required files</span>
+            <h2>Requirements</h2>
+            <p>Use this component to inform your users regards required files</p>
+          </header>
+
+
+          <div class="code-snippet">
+<pre class="line-numbers no-name"><code class="language-markup">
+&lt;div class=&quot;requirements&quot;&gt;
+  &lt;div class=&quot;css&quot;&gt;&amp;lt;link href=&quot;assets/vendors/videojs/video-js.min.css&quot; rel=&quot;stylesheet&quot;&amp;gt;&lt;/div&gt;
+  &lt;div class=&quot;js&quot;&gt;&amp;lt;script src=&quot;assets/vendors/videojs/video.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            <div class="code-preview">
+              <div class="requirements">
+                <div class="css">&lt;link href="assets/vendors/videojs/video-js.min.css" rel="stylesheet"&gt;</div>
+                <div class="js">&lt;script src="assets/vendors/videojs/video.min.js"&gt;&lt;/script&gt;</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <!-- END Section - Requirements -->
+
+      <!-- Section - Counter -->
+      <section id="sec-counter">
+        <div class="container">
+          <header class="section-header">
+            <span>Count to</span>
+            <h2>Counter</h2>
+            <p>Start counting numbers upon appearance of the element</p>
+          </header>
+
+
+          <div class="code-window">
+            <div class="code-preview">
+
+              <div class="row">
+                <div class="counter col-md-3 col-sm-6">
+                  <i class="fa fa-users"></i>
+                  <p><span data-from="0" data-to="820">0</span>+</p>
+                  <h6>Satisfied users</h6>
+                </div>
+
+                <div class="counter col-md-3 col-sm-6">
+                  <i class="fa fa-clock-o"></i>
+                  <p><span data-from="0" data-to="1200" data-speed="2200">0</span>+</p>
+                  <h6>Hours of coding</h6>
+                </div>
+
+                <div class="counter col-md-3 col-sm-6">
+                  <i class="fa fa-github"></i>
+                  <p><span data-from="0" data-to="2300" data-speed="2500">0</span>+</p>
+                  <h6>Stars</h6>
+                </div>
+
+                <div class="counter col-md-3 col-sm-6">
+                  <i class="fa fa-code"></i>
+                  <p><span data-from="0" data-to="10000" data-speed="3000">0</span>+</p>
+                  <h6>Line of code</h6>
+                </div>
+              </div>
+
+            </div>
+
+<pre class="line-numbers"><code class="language-markup">
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;counter col-md-3 col-sm-6&quot;&gt;
+    &lt;i class=&quot;fa fa-users&quot;&gt;&lt;/i&gt;
+    &lt;p&gt;&lt;span data-from=&quot;0&quot; data-to=&quot;820&quot;&gt;0&lt;/span&gt;+&lt;/p&gt;
+    &lt;h6&gt;Satisfied users&lt;/h6&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;counter col-md-3 col-sm-6&quot;&gt;
+    &lt;i class=&quot;fa fa-clock-o&quot;&gt;&lt;/i&gt;
+    &lt;p&gt;&lt;span data-from=&quot;0&quot; data-to=&quot;1200&quot; data-speed=&quot;2200&quot;&gt;0&lt;/span&gt;+&lt;/p&gt;
+    &lt;h6&gt;Hours of coding&lt;/h6&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;counter col-md-3 col-sm-6&quot;&gt;
+    &lt;i class=&quot;fa fa-github&quot;&gt;&lt;/i&gt;
+    &lt;p&gt;&lt;span data-from=&quot;0&quot; data-to=&quot;2300&quot; data-speed=&quot;2500&quot;&gt;0&lt;/span&gt;+&lt;/p&gt;
+    &lt;h6&gt;Stars&lt;/h6&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;counter col-md-3 col-sm-6&quot;&gt;
+    &lt;i class=&quot;fa fa-code&quot;&gt;&lt;/i&gt;
+    &lt;p&gt;&lt;span data-from=&quot;0&quot; data-to=&quot;10000&quot; data-speed=&quot;3000&quot;&gt;0&lt;/span&gt;+&lt;/p&gt;
+    &lt;h6&gt;Line of code&lt;/h6&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+          </div>
+
+          <p>You can add <code>.color-alt</code> class to <code>.counter</code> element to make their colors white. It would be necessary to use it when you put the counters on an image. Also, you always can use contextual classes to change colors.</p>
+
+          <h4>Options</h4>
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>Data Attribute</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>data-from</td>
+                  <td>The number to start counting from. (default: 0)</td>
+                </tr>
+
+                <tr>
+                  <td>data-to</td>
+                  <td>The number to stop counting at. (default: 100)</td>
+                </tr>
+
+                <tr>
+                  <td>data-speed</td>
+                  <td>The number of milliseconds it should take to finish counting. (default: 1000)</td>
+                </tr>
+
+                <tr>
+                  <td>data-refresh-interval</td>
+                  <td>The number of milliseconds it should take to finish counting. (default: 1000)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+
+        </div>
+      </section>
+      <!-- END Section - Counter -->
+
+      <!-- Section - Testimonial -->
+      <section id="sec-testimonial">
+        <div class="container">
+          <header class="section-header">
+            <span>Client's review</span>
+            <h2>Testimonial</h2>
+            <p>Use a slider to show your clients' messages on your homepage</p>
+          </header>
+
+
+          <div class="code-window">
+            <div class="code-preview">
+
+              <ul class="testimonials">
+                <li>
+                  <img src="assets/img/avatar-1.jpg" alt="avatar">
+                  <p>Quisque viverra risus a ex pulvinar, a lobortis arcu laoreet. Phasellus id semper nulla, quis dignissim enim. Aliquam condimentum, libero in varius aliquet, eros lorem volutpat libero, quis tempor eros mauris sit amet ex.</p>
+                  <h6>John due, Some Inc.</h6>
+                </li>
+
+                <li>
+                  <img src="assets/img/avatar-2.jpg" alt="avatar">
+                  <p>Morbi egestas, nunc in eleifend maximus, lacus nisl consequat sapien, quis vulputate tortor nisi volutpat nulla. Vestibulum a pretium mi. Proin lacinia eros velit, quis maximus justo commodo nec.</p>
+                  <h6>David M. Hubiour, Another Inc.</h6>
+                </li>
+
+                <li>
+                  <img src="assets/img/avatar-3.jpg" alt="avatar">
+                  <p>Pellentesque dolor diam, posuere a eleifend non, volutpat at sapien. Quisque dignissim, nibh sed ultrices gravida, libero massa maximus velit, a viverra urna neque vitae libero. Curabitur tincidunt sagittis blandit.</p>
+                  <h6>Michel Songalie, Blahblah Inc.</h6>
+                </li>
+              </ul>
+
+            </div>
+
+<pre class="line-numbers"><code class="language-markup">
+&lt;ul class=&quot;testimonials&quot;&gt;
+  &lt;li&gt;
+    &lt;img src=&quot;assets/img/avatar-1.jpg&quot; alt=&quot;avatar&quot;&gt;
+    &lt;p&gt;Quisque viverra risus a ex pulvinar, a lobortis arcu laoreet. Phasellus id semper nulla, quis dignissim enim. Aliquam condimentum, libero in varius aliquet, eros lorem volutpat libero, quis tempor eros mauris sit amet ex.&lt;/p&gt;
+    &lt;h6&gt;John due, Some Inc.&lt;/h6&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;img src=&quot;assets/img/avatar-2.jpg&quot; alt=&quot;avatar&quot;&gt;
+    &lt;p&gt;Morbi egestas, nunc in eleifend maximus, lacus nisl consequat sapien, quis vulputate tortor nisi volutpat nulla. Vestibulum a pretium mi. Proin lacinia eros velit, quis maximus justo commodo nec.&lt;/p&gt;
+    &lt;h6&gt;David M. Hubiour, Another Inc.&lt;/h6&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;img src=&quot;assets/img/avatar-3.jpg&quot; alt=&quot;avatar&quot;&gt;
+    &lt;p&gt;Pellentesque dolor diam, posuere a eleifend non, volutpat at sapien. Quisque dignissim, nibh sed ultrices gravida, libero massa maximus velit, a viverra urna neque vitae libero. Curabitur tincidunt sagittis blandit.&lt;/p&gt;
+    &lt;h6&gt;Michel Songalie, Blahblah Inc.&lt;/h6&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+          </div>
+
+
+        </div>
+      </section>
+      <!-- END Section - Testimonial -->
+
+      <!-- Section - Icons -->
+      <section id="sec-icons">
+        <div class="container">
+          <header class="section-header">
+            <span>Font icons</span>
+            <h2>Icons</h2>
+            <p>Symbolizes a command, action, or information using UI icons</p>
+          </header>
+
+          <p><strong>TheGuide</strong> has included FontAwesome in its package and will update it regularly by new releases. So you're safe to use any icon from <a href="https://fortawesome.github.io/Font-Awesome/icons/">FontAwesome website</a>.</p>
+        </div>
+      </section>
+      <!-- END Section - Icons -->
+
+    </main>
+    <!-- END Main container -->
+
+
+    <!-- Site footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <ul class="footer-links">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Privacy policy</a></li>
+              <li><a href="#">Changelog</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="footer-socials">
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyrights &copy; 2015 All Rights Reserved by <a href="#">ShaMSofT</a>.</p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <p class="back-to-top"><a id="scroll-up" href="#">back to top</a></p>
+          </div>
+        </div>
+        
+      </div>
+    </footer>
+    <!-- END Site footer -->
+
+
+    <!-- Scripts -->
+    <script src="assets/vendors/videojs/video.min.js"></script>
+    <script src="assets/js/app.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+  </body>
+</html>
