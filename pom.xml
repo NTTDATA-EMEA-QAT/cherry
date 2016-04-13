@@ -3,7 +3,7 @@
 
     <groupId>io.magentys</groupId>
     <artifactId>cherry</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>0.0.3</version>
     <packaging>jar</packaging>
 
     <name>cherry</name>
@@ -22,17 +22,17 @@
     <scm>
         <developerConnection>scm:git:https://github.com/MagenTys/cherry</developerConnection>
         <url>https://github.com/MagenTys/cherry</url>
-      <tag>HEAD</tag>
+      <tag>cherry-0.0.3</tag>
   </scm>
 
     <distributionManagement>
         <snapshotRepository>
-            <id>main.maven.snapshots</id>
+            <id>ossrh.snap</id>
             <name>Main Maven Repo - Snapshots </name>
             <url> https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
         <repository>
-            <id>main.maven.releases</id>
+            <id>ossrh</id>
             <name>Main Maven Repo - Releases</name>
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
         </repository>
@@ -65,7 +65,7 @@
                 <version>1.6.3</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <serverId>main.maven.releases</serverId>
+                    <serverId>ossrh</serverId>
                     <nexusUrl>https://oss.sonatype.org</nexusUrl>
                     <autoReleaseAfterClose>true</autoReleaseAfterClose>
                 </configuration>
@@ -107,6 +107,12 @@
                         <goals>
                             <goal>sign</goal>
                         </goals>
+                        <configuration>
+                            <keyname>BCF7D3CB</keyname>
+                            <passphrase>mat2414</passphrase>
+                            <!--<<homedir>/Users/kostasmamalis/.gnung</homedir>-->
+
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
