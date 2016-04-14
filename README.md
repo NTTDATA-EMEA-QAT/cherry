@@ -110,6 +110,8 @@ Steps:
           
           
           
-            
+- Developers: [Kostas Mamalis](https://twitter.com/mamalisk)
+
+Powered by: [Magentys](http://magentys.io)            
             
 
