@@ -4,6 +4,8 @@
 
 A Syntactical Sugar project implementing the Mission pattern.
 
+**Full Documentation can be found at: [http://magentys.github.io/cherry](http://magentys.github.io/cherry)**
+
 ## How to install
 
 ### Maven
