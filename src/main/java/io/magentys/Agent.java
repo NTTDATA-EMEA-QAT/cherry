@@ -13,7 +13,7 @@ import static io.magentys.utils.Requires.requires;
 public class Agent {
 
     private final Memory memory;
-    private final List<Any> tools = new ArrayList<>();
+    private final List<Any> tools = new ArrayList<Any>();
 
     public Agent(final Memory memory) {
         this.memory = memory;

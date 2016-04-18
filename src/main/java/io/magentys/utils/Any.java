@@ -11,7 +11,7 @@ public class Any<T> {
     }
 
     public static <T> Any<T> any(final T t) {
-        return new Any<>(t);
+        return new Any<T>(t);
     }
 
     public T get(){
