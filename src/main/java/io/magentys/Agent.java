@@ -13,7 +13,7 @@ import static io.magentys.utils.Requires.requires;
 public class Agent {
 
     private final Memory memory;
-    private List<Any> tools = new ArrayList<>();
+    private final List<Any> tools = new ArrayList<>();
 
     public Agent(final Memory memory) {
         this.memory = memory;
@@ -23,28 +23,28 @@ public class Agent {
         return new Agent(mem);
     }
 
-    public <RESULT> RESULT performs(Mission<RESULT> mission) {
+    public <RESULT> RESULT performs(final Mission<RESULT> mission) {
         return mission.accomplishAs(this);
     }
 
-    public Agent performAll(Mission... missions) {
+    public Agent performAll(final Mission... missions) {
         requires(missions != null && missions.length > 0, "No Missions were passed");
-        for (Mission mission : missions) {
+        for (final Mission mission : missions) {
             mission.accomplishAs(this);
         }
         return this;
     }
 
-    public <TOOL> Agent obtains(TOOL... tools) {
-        for (TOOL tool : tools) {
+    public <TOOL> Agent obtains(final TOOL... tools) {
+        for (final TOOL tool : tools) {
             this.tools.add(any(tool));
         }
         return this;
     }
 
-    public <TOOL> TOOL usingThe(Class<TOOL> toolClass) {
+    public <TOOL> TOOL usingThe(final Class<TOOL> toolClass) {
 
-        for (Any tool : tools) {
+        for (final Any tool : tools) {
             if (Clazz.isClassOrSubclass(toolClass, tool.get().getClass())) {
                 return (TOOL) tool.get();
             }
@@ -53,24 +53,24 @@ public class Agent {
         throw new NotAvailableException("I don't know this skill: " + toolClass);
     }
 
-    public <VALUE> void keepsInMind(String s, VALUE value) {
-        this.memory.remember(s, value);
+    public <VALUE> void keepsInMind(final String key, final VALUE value) {
+        this.memory.remember(key, value);
     }
 
-    public <VALUE> VALUE recalls(String s, Class<VALUE> clazz) {
-        return (VALUE) memory.recall(s, clazz);
+    public <VALUE> VALUE recalls(final String key, final Class<VALUE> clazz) {
+        return (VALUE) memory.recall(key, clazz);
     }
 
-    public Agent and(Mission mission) {
+    public Agent and(final Mission mission) {
         performAll(mission);
         return this;
     }
 
-    public Agent andHe(Mission... missions) {
+    public Agent andHe(final Mission... missions) {
         return performAll(missions);
     }
 
-    public Agent andShe(Mission... missions) {
+    public Agent andShe(final Mission... missions) {
         return performAll(missions);
     }
 

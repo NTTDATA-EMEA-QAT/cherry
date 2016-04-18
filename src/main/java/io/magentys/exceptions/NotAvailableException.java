@@ -5,11 +5,12 @@ package io.magentys.exceptions;
  */
 public class NotAvailableException extends RuntimeException {
 
-    public NotAvailableException(String message) {
+    public NotAvailableException(final String message) {
         super(message);
     }
 
-    public NotAvailableException(Class clazz){
-        super("Tool of type: \"" + clazz + "\" not found in agent's toolset... Use agent.obtains(<tool>) method to assign tools to agent.");
+    public NotAvailableException(final Class clazz){
+        super(String.format("Tool of type: \"%s\" not found in agent's toolset... Use agent.obtains(<tool>) method to assign tools to agent.",
+                clazz.toString()));
     }
 }
