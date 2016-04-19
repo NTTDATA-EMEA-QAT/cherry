@@ -5,11 +5,12 @@ package io.magentys.exceptions;
  */
 public class RequirementException extends RuntimeException {
 
-    public RequirementException(String message) {
+    public RequirementException(final String message) {
         super(message);
     }
 
-    public RequirementException(Class clazz){
-        super("Tool of type: \"" + clazz + "\" not found in agent's toolset... Use agent.obtains(<tool>) method to assign tools to agent.");
+    public RequirementException(final Class clazz){
+        super(String.format("Tool of type: \"%s\" not found in agent's toolset... Use agent.obtains(<tool>) method to assign tools to agent.",
+                clazz.toString()));
     }
 }

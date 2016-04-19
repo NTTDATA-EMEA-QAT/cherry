@@ -18,14 +18,16 @@ public class CoreMemory implements Memory<String> {
     }
 
     @Override
-    public <VALUE> void remember(String key, VALUE value) {
+    public <VALUE> void remember(final String key, final VALUE value) {
          map.put(key, any(value));
     }
 
     @Override
-    public <VALUE> VALUE recall(String key, Class<VALUE> clazz) {
-        Any result = map.get(key);
-        if(result == null) return null;
+    public <VALUE> VALUE recall(final String key, final Class<VALUE> clazz) {
+        final Any result = map.get(key);
+        if(result == null) {
+            return null;
+        }
         final Object unwrapped = result.get();
         if (Clazz.isClassOrSubclass(clazz, unwrapped.getClass())) {
            return (VALUE) unwrapped;
