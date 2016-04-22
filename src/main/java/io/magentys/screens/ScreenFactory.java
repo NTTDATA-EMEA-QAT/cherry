@@ -23,7 +23,7 @@ public abstract class ScreenFactory {
 
     protected abstract <T extends Screen> void instantiateAndRemember(T screen, Field field) throws IllegalAccessException;
 
-    private static boolean isElement(Field field) {
+    protected static boolean isElement(Field field) {
         java.util.List<Class<?>> interfaces = Arrays.asList(field.getType().getInterfaces());
         return interfaces.contains(ScreenElement.class);
     }
