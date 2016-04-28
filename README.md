@@ -6,7 +6,7 @@
 
 A Syntactical Sugar project implementing the Mission pattern.
 
-**Full Documentation can be found at: [http://magentys.github.io/cherry](http://magentys.github.io/cherry)**
+**Full Documentation can be found at: [http://cherryframe.work](http://cherryframe.work)**
 
 ## How to install
 
