@@ -1,4 +1,4 @@
-# Cherry
+# Cherry JVM Framework
 
 [![Join the chat at https://gitter.im/MagenTys/cherry](https://badges.gitter.im/MagenTys/cherry.svg)](https://gitter.im/MagenTys/cherry?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
@@ -6,7 +6,7 @@
 
 A Syntactical Sugar project implementing the Mission pattern.
 
-**Full Documentation can be found at: [http://magentys.github.io/cherry](http://magentys.github.io/cherry)**
+**Full Documentation can be found at: [http://cherryframe.work](http://cherryframe.work)**
 
 ## How to install
 
@@ -116,6 +116,6 @@ Steps:
           
 - Developers: [Kostas Mamalis](https://twitter.com/mamalisk)
 
-Powered by: [Magentys](http://magentys.io)            
+Powered by: [MagenTys](http://magentys.io)            
             
 
