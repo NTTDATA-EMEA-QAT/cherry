@@ -5,7 +5,12 @@ import org.hamcrest.Matcher;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class AgentVerifier {
-    private final Agent agent;
+
+    public Agent getAgent() {
+        return agent;
+    }
+
+    protected final Agent agent;
 
     public AgentVerifier(Agent agent) {
         this.agent = agent;
