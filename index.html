@@ -27,10 +27,9 @@
     <!-- Navigation -->
     <nav class="page-navigation full-topbar">
       <ul class="nav">
-              <li><a href="#sec-how-to-use">Start using now!</a></li>
-
-        <li><a href="#sec-mission-pattern">Mission Pattern</a></li>
         <li><a href="#sec-modules">Cherry Modules [stay tuned!]</a></li>
+        <li><a href="#sec-mission-pattern">Mission Pattern</a></li>
+        <li><a href="#sec-how-to-use">Start using now!</a></li>
       </ul>
     </nav>
     <!-- END Navigation -->
@@ -93,7 +92,147 @@
     <main>
      
 <!-- Section - Starter template -->
-      <section id="sec-how-to-use">
+ 
+<!-- Section - Quick start -->
+      <section id="sec-modules">
+        <div class="container">
+          <header class="section-header">
+            <span>Cherry Picking...</span>
+            <h2>Modules</h2>
+            <p>Make use of some our out-of-the-box <strong>Missions</strong> we prepared for you.</p><p> Feel free to <strong>'Cherry-pick'</strong> the ones you need in your project.</p>
+          </header>
+
+          <ul class="step-text step-cols-2">
+            
+              <li>
+              <h5>Cherry (core)</h5>
+              <p>This is our core module containing all the basic entities of Mission Pattern: Add <code>&lt;artifactId&gt;cherry&lt;/artifactId&gt;</code> in your dependencies</p>
+            </li>
+            
+            <li>
+              <h5>Cherry-Java8</h5>
+              <p>Fun of Java 8 lambdas (λ) &amp; ComposableFutures?... Then introduce <code>&lt;artifactId&gt;cherry-java8&lt;/artifactId&gt;</code> in your dependencies</p>
+            </li>
+
+            <li>
+              <h5>Cherry-WebDriver</h5>
+              <p>For Web automation use our Web Screens and &amp; Hamcrest Matchers for element attributes. Just introduce <code>&lt;artifactId&gt;cherry-webdriver&lt;/artifactId&gt;</code> in your dependencies</p>
+            </li>
+
+            <li>
+              <h5>Cherry-Rest</h5>
+              <p>Test Restful APIs with our Rest missions.</p>
+               <p>Just add <code>&lt;artifactId&gt;cherry-rest&lt;/artifactId&gt;</code> in your dependencies</p>
+            </li>
+
+            <li>
+              <h5>Cherry-Fest</h5>
+              <p>Need to to Test a Java Swing App?</p>
+               <p>Then add <code>&lt;artifactId&gt;cherry-fest&lt;/artifactId&gt;</code> in your dependencies</p>
+            </li>
+
+            <!--
+
+            
+
+            <li>
+              <h5>Cherry-JavaRX</h5>
+              <p>Need to subscribe to Observables?</p>
+               <p>Then add <code>&lt;artifactId&gt;cherry-javarx&lt;/artifactId&gt;</code> in your dependencies</p>
+            </li>
+
+
+          
+
+            <li>
+              <h5>Cherry-Scala</h5>
+              <p>Our Scala version of Mission Pattern.</p>
+              <p>Just add <code>&lt;artifactId&gt;cherry-scala&lt;/artifactId&gt;</code> in your dependencies</p>
+            </li>
+
+            <li>
+              <h5>Cherry-Jdbc</h5>
+              <p>Need to connect to database and you want the equivalent missions?</p>
+              <p>Just add <code>&lt;artifactId&gt;cherry-jdbc&lt;/artifactId&gt;</code> in your dependencies</p>
+            </li> -->
+          </ul>
+
+
+        </div>
+      </section>
+
+
+
+      <!-- Section - Mission Pattern -->
+      <section id="sec-mission-pattern">
+        <div class="container">
+          <header class="section-header">
+            <span>Implementing the...:</span>
+            <h2>Mission Pattern</h2>
+            <p>A Pattern that simplifies and modularises your testing code.</p>
+          </header>
+
+
+          <h5><u>Agent + Tools = Missions </u></h5>
+          <p class="text-cols-2 text-justify"><strong>Cherry JVM</strong> is a java framework which implements the <strong>Mission Pattern</strong>. </p>
+          
+
+          <p class="text-cols-2 text-justify">The <strong>'Mission Pattern'</strong> comprises of 3 main concepts:</p>
+          <ol>
+              <li><strong>Agent:</strong> the entity responsible for missions</li>
+              <li><strong>Mission:</strong> a task or a set of tasks that can (optionally) return a result</li>
+              <li><strong>Tools:</strong> any object (e.g. instance of Webdriver etc.) that the Agent can use to accomplish their Missions</li>
+          </ol>
+
+          <h5><a href="https://magentys.gitbooks.io/cherry/content/mission_pattern.html">Mission Pattern explained here!</a></h5>
+          
+
+          <h4>Features</h4>
+          <p>Check out some of features that we have. To know more about features of Cherry JVM, continue reading our documentation and check our available components.</p>
+          <br>
+
+          <ul class="features icon-sided">
+            <li>
+              <div class="icon"><i class="fa fa-tv"></i></div>
+              <h5>Web &amp; Rest APIs testing</h5>
+              <p>Using <i>cherry-webdriver</i> and <i>cherry-rest</i> you can test any website or Restful API.</p>
+            </li>
+
+            <li>
+              <div class="icon"><i class="fa fa-wrench"></i></div>
+              <h5>Customizable</h5>
+              <p>You can easily customize it to create your own tools.</p>
+            </li>
+
+            <li>
+              <div class="icon"><i class="fa fa-cubes"></i></div>
+              <h5>Modularized</h5>
+              <p>Split into modules (e.g. cherry-java8, cherry-rest etc) so you can 'cherry pick' according to your testing needs.</p>
+            </li>
+
+            <li>
+              <div class="icon"><i class="fa fa-code"></i></div>
+              <h5>Clean code &amp; DSL</h5>
+              <p>You can find our code well organized, commented and readable.</p>
+            </li>
+
+            <li>
+              <div class="icon"><i class="fa fa-file-text-o"></i></div>
+              <h5>Reporting</h5>
+              <p>Meaningful reporting.</p>
+            </li>
+
+            <li>
+              <div class="icon"><i class="fa fa-download"></i></div>
+              <h5>Open Source</h5>
+              <p>Feel free to contribute.</p>
+            </li>
+          </ul>
+
+        </div>
+      </section>
+      <!-- END Section - Introduction -->
+     <section id="sec-how-to-use">
         <div class="container">
           <header class="section-header">
             <span>Better understanding</span>
@@ -218,151 +357,11 @@
       <!-- END Section - Starter template -->
 
 
-
-
-
-
-      <!-- Section - Mission Pattern -->
-      <section id="sec-mission-pattern">
-        <div class="container">
-          <header class="section-header">
-            <span>Implementing the...:</span>
-            <h2>Mission Pattern</h2>
-            <p>A Pattern that simplifies and modularises your testing code.</p>
-          </header>
-
-
-          <h5><u>Agent + Tools = Missions </u></h5>
-          <p class="text-cols-2 text-justify"><strong>Cherry JVM</strong> is a java framework which implements the <strong>Mission Pattern</strong>. </p>
-          
-
-          <p class="text-cols-2 text-justify">The <strong>'Mission Pattern'</strong> comprises of 3 main concepts:</p>
-          <ol>
-              <li><strong>Agent:</strong> the entity responsible for missions</li>
-              <li><strong>Mission:</strong> a task or a set of tasks that can (optionally) return a result</li>
-              <li><strong>Tools:</strong> any object (e.g. instance of Webdriver etc.) that the Agent can use to accomplish their Missions</li>
-          </ol>
-
-          <h5><a href="https://magentys.gitbooks.io/cherry/content/mission_pattern.html">Mission Pattern explained here!</a></h5>
-          
-
-          <h4>Features</h4>
-          <p>Check out some of features that we have. To know more about features of Cherry JVM, continue reading our documentation and check our available components.</p>
-          <br>
-
-          <ul class="features icon-sided">
-            <li>
-              <div class="icon"><i class="fa fa-tv"></i></div>
-              <h5>Web &amp; Rest APIs testing</h5>
-              <p>Using <i>cherry-webdriver</i> and <i>cherry-rest</i> you can test any website or Restful API.</p>
-            </li>
-
-            <li>
-              <div class="icon"><i class="fa fa-wrench"></i></div>
-              <h5>Customizable</h5>
-              <p>You can easily customize it to create your own tools.</p>
-            </li>
-
-            <li>
-              <div class="icon"><i class="fa fa-cubes"></i></div>
-              <h5>Modularized</h5>
-              <p>Split into modules (e.g. cherry-java8, cherry-rest etc) so you can 'cherry pick' according to your testing needs.</p>
-            </li>
-
-            <li>
-              <div class="icon"><i class="fa fa-code"></i></div>
-              <h5>Clean code &amp; DSL</h5>
-              <p>You can find our code well organized, commented and readable.</p>
-            </li>
-
-            <li>
-              <div class="icon"><i class="fa fa-file-text-o"></i></div>
-              <h5>Reporting</h5>
-              <p>Meaningful reporting.</p>
-            </li>
-
-            <li>
-              <div class="icon"><i class="fa fa-download"></i></div>
-              <h5>Open Source</h5>
-              <p>Feel free to contribute.</p>
-            </li>
-          </ul>
-
-        </div>
-      </section>
-      <!-- END Section - Introduction -->
-
       
 
       
 
-      <!-- Section - Quick start -->
-      <section id="sec-modules">
-        <div class="container">
-          <header class="section-header">
-            <span>Cherry Picking...</span>
-            <h2>Modules</h2>
-            <p>Make use of some our out-of-the-box <strong>Missions</strong> we prepared for you.</p><p> Feel free to <strong>'Cherry-pick'</strong> the ones you need in your project.</p>
-          </header>
-
-          <ul class="step-text step-cols-2">
-            
-              <li>
-              <h5>Cherry (core)</h5>
-              <p>This is our core module containing all the basic entities of Mission Pattern: Add <code>&lt;artifactId&gt;cherry&lt;/artifactId&gt;</code> in your dependencies</p>
-            </li>
-            
-            <li>
-              <h5>Cherry-Java8</h5>
-              <p>Fun of Java 8 lambdas (λ) &amp; ComposableFutures?... Then introduce <code>&lt;artifactId&gt;cherry-java8&lt;/artifactId&gt;</code> in your dependencies</p>
-            </li>
-
-            <li>
-              <h5>Cherry-WebDriver</h5>
-              <p>For Web automation use our Web Screens and &amp; Hamcrest Matchers for element attributes. Just introduce <code>&lt;artifactId&gt;cherry-webdriver&lt;/artifactId&gt;</code> in your dependencies</p>
-            </li>
-
-            <li>
-              <h5>Cherry-Rest</h5>
-              <p>Test Restful APIs with our Rest missions.</p>
-               <p>Just add <code>&lt;artifactId&gt;cherry-rest&lt;/artifactId&gt;</code> in your dependencies</p>
-            </li>
-
-            <li>
-              <h5>Cherry-Fest</h5>
-              <p>Need to to Test a Java Swing App?</p>
-               <p>Then add <code>&lt;artifactId&gt;cherry-fest&lt;/artifactId&gt;</code> in your dependencies</p>
-            </li>
-
-            <!--
-
-            
-
-            <li>
-              <h5>Cherry-JavaRX</h5>
-              <p>Need to subscribe to Observables?</p>
-               <p>Then add <code>&lt;artifactId&gt;cherry-javarx&lt;/artifactId&gt;</code> in your dependencies</p>
-            </li>
-
-
-          
-
-            <li>
-              <h5>Cherry-Scala</h5>
-              <p>Our Scala version of Mission Pattern.</p>
-              <p>Just add <code>&lt;artifactId&gt;cherry-scala&lt;/artifactId&gt;</code> in your dependencies</p>
-            </li>
-
-            <li>
-              <h5>Cherry-Jdbc</h5>
-              <p>Need to connect to database and you want the equivalent missions?</p>
-              <p>Just add <code>&lt;artifactId&gt;cherry-jdbc&lt;/artifactId&gt;</code> in your dependencies</p>
-            </li> -->
-          </ul>
-
-
-        </div>
-      </section>
+      
       <!-- END Section - Quick start -->
 
     </main>
