@@ -13,14 +13,14 @@ import static io.magentys.utils.Requires.requiresNotNull;
 
 public class Agent {
 
-    private Memory memory;
-    private List<Any> tools = new ArrayList<Any>();
+    protected Memory memory;
+    protected List<Any> tools = new ArrayList<Any>();
 
     public Agent(final Memory memory) {
         this.memory = memory;
     }
 
-    void setMemory(final Memory mem) {
+    protected void setMemory(final Memory mem) {
         this.memory = mem;
     }
 
