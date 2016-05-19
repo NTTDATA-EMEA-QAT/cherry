@@ -23,4 +23,10 @@ public class AgentVerifier {
     public <TYPE> void that(Mission<TYPE> obj, Matcher<TYPE> objectMatcher) {
         assertThat(obj.accomplishAs(agent), objectMatcher);
     }
+
+    public <TYPE> void that(TYPE obj, Matcher<TYPE> objectMatcher) {
+        assertThat(obj, objectMatcher);
+    }
+
+
 }

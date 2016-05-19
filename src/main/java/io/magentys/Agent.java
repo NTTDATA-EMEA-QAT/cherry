@@ -9,18 +9,19 @@ import java.util.List;
 
 import static io.magentys.utils.Any.any;
 import static io.magentys.utils.Requires.requires;
+import static io.magentys.utils.Requires.requiresNotNull;
 
 public class Agent {
 
-    private final Memory memory;
-    private final List<Any> tools = new ArrayList<Any>();
+    private Memory memory;
+    private List<Any> tools = new ArrayList<Any>();
 
     public Agent(final Memory memory) {
         this.memory = memory;
     }
 
-    public static Agent withMemory(final Memory mem) {
-        return new Agent(mem);
+    void setMemory(final Memory mem) {
+        this.memory = mem;
     }
 
     public <RESULT> RESULT performs(final Mission<RESULT> mission) {
@@ -35,10 +36,16 @@ public class Agent {
         return this;
     }
 
-    public <TOOL> Agent obtains(final TOOL... tools) {
-        for (final TOOL tool : tools) {
+    public Agent obtains(final Object... tools) {
+        requiresNotNull(tools, "tools were empty");
+        for (final Object tool : tools) {
             this.tools.add(any(tool));
         }
+        return this;
+    }
+
+    Agent setTools(List<Any> tools){
+        this.tools = tools;
         return this;
     }
 
@@ -72,6 +79,24 @@ public class Agent {
 
     public Agent andShe(final Mission... missions) {
         return performAll(missions);
+    }
+
+
+    public List<Any> getTools() {
+        return tools;
+    }
+
+    public Memory getMemory() {
+        return memory;
+    }
+
+    public Agent clone(){
+        return new Agent(memory).setTools(tools);
+    }
+
+    public <KEY> Agent askThe(final Agent anotherAgent, KEY key){
+        anotherAgent.getMemory().transferTo(memory, key);
+        return this;
     }
 
 

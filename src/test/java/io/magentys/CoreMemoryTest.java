@@ -42,4 +42,14 @@ public class CoreMemoryTest {
         final Object result = coreMemory.recall("foo", Object.class);
         assertThat(result, is(nullValue()));
     }
+
+    @Test
+    public void shouldTransferKnowledgeFromAnotherMemory() throws Exception {
+        CoreMemory coreMemory1 = CoreMemory.coreMemory();
+        CoreMemory coreMemory2 = CoreMemory.coreMemory();
+        coreMemory1.remember("key1","value1");
+        coreMemory1.transferTo(coreMemory2, "key1");
+        String transferedValue = coreMemory2.recall("key1", String.class);
+        assertThat(transferedValue, is("value1"));
+    }
 }

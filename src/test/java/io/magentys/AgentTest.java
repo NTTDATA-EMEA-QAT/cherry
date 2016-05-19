@@ -6,7 +6,10 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
+import java.util.UUID;
+
 import static io.magentys.AgentProvider.agent;
+import static io.magentys.AgentProvider.provideAgent;
 import static io.magentys.AgentTest.Print.printsTheDocument;
 import static io.magentys.AgentTest.Printer.aPrinter;
 import static io.magentys.AgentTest.Scan.scansThe;
@@ -53,6 +56,17 @@ public class AgentTest {
         notAvailableToBeThrown.expectMessage("I don't know this skill: class io.magentys.AgentTest$Printer");
 
         agent.performs(new Print());
+    }
+
+    @Test
+    public void shouldTransferKnowledgeToAnotherAgent() throws Exception {
+        String randomKey = UUID.randomUUID().toString();
+        String randomValue = UUID.randomUUID().toString();
+        agent.keepsInMind(randomKey,randomValue);
+        Agent anotherAgent = provideAgent().get();
+        anotherAgent.askThe(agent, randomKey);
+        assertThat(anotherAgent.recalls(randomKey, String.class), is(randomValue));
+
     }
 
     @Test

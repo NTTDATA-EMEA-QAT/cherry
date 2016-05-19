@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import static io.magentys.utils.Any.any;
+import static io.magentys.utils.Requires.requires;
 
 public class CoreMemory implements Memory<String> {
 
@@ -23,6 +24,11 @@ public class CoreMemory implements Memory<String> {
     }
 
     @Override
+    public void remember(String key, Any any) {
+        map.put(key, any);
+    }
+
+    @Override
     public <VALUE> VALUE recall(final String key, final Class<VALUE> clazz) {
         final Any result = map.get(key);
         if(result == null) {
@@ -33,5 +39,22 @@ public class CoreMemory implements Memory<String> {
            return (VALUE) unwrapped;
         }
         throw new NotAvailableException("Expected value in memory was not of type: " + clazz);
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return map.isEmpty();
+    }
+
+    @Override
+    public Any recall(String key) {
+        return map.get(key);
+    }
+
+    @Override
+    public void transferTo(Memory memory, String key) {
+        requires(memory instanceof CoreMemory, "It's not a Core Memory");
+        CoreMemory casted = (CoreMemory) memory;
+        memory.remember(key, map.get(key));
     }
 }
