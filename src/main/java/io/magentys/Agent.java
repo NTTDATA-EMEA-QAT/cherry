@@ -1,11 +1,15 @@
 package io.magentys;
 
+import io.magentys.annotations.Narrate;
 import io.magentys.exceptions.NotAvailableException;
 import io.magentys.utils.Any;
 import io.magentys.utils.Clazz;
+import io.magentys.utils.Strings;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import static io.magentys.utils.Any.any;
 import static io.magentys.utils.Requires.requires;
@@ -16,6 +20,12 @@ public class Agent {
     protected Memory memory;
     protected List<Any> tools = new ArrayList<Any>();
 
+    public Set<Narrator> getNarrators() {
+        return narrators;
+    }
+
+    protected Set<Narrator> narrators = new HashSet<Narrator>();
+
     public Agent(final Memory memory) {
         this.memory = memory;
     }
@@ -25,13 +35,42 @@ public class Agent {
     }
 
     public <RESULT> RESULT performs(final Mission<RESULT> mission) {
-        return mission.accomplishAs(this);
+        narrateBefore(mission);
+        RESULT result = mission.accomplishAs(this);
+        narrateAfter(mission);
+        return result;
+    }
+
+    protected <RESULT> void narrateBefore(Mission<RESULT> mission) {
+        if(mission.getClass().isAnnotationPresent(Narrate.class)){
+            Narrate narrate = mission.getClass().getAnnotation(Narrate.class);
+            narrateThat(narrate.value());
+        }
+    }
+
+    protected <RESULT> void narrateAfter(Mission<RESULT> mission) {
+        if(mission.getClass().isAnnotationPresent(Narrate.class)){
+            Narrate narrate = mission.getClass().getAnnotation(Narrate.class);
+            if(!Strings.empty.equals(narrate.after()) && narrate.after() != null) narrateThat(narrate.after());
+        }
+    }
+
+    public void narrateThat(String message){
+        for(Narrator narrator : narrators) {
+            narrator.narrate("info", message);
+        }
+    }
+
+    public void narrateThat(String level, String message){
+        for(Narrator narrator : narrators){
+            narrator.narrate("info", message);
+        }
     }
 
     public Agent performAll(final Mission... missions) {
         requires(missions != null && missions.length > 0, "No Missions were passed");
         for (final Mission mission : missions) {
-            mission.accomplishAs(this);
+            performs(mission);
         }
         return this;
     }
@@ -44,8 +83,21 @@ public class Agent {
         return this;
     }
 
-    protected Agent setTools(List<Any> tools){
+    public Agent reportsUsing(final Narrator... narrators){
+        requiresNotNull(narrators, "narrators were null");
+        for(final Narrator narrator : narrators){
+            this.narrators.add(narrator);
+        }
+        return this;
+    }
+
+    public Agent setTools(List<Any> tools){
         this.tools = tools;
+        return this;
+    }
+
+    public Agent setNarrators(Set<Narrator> narrators){
+        this.narrators = narrators;
         return this;
     }
 
@@ -90,8 +142,17 @@ public class Agent {
         return memory;
     }
 
+    public Agent addNarrators(Narrator... narrators){
+        requiresNotNull(narrators, "Narrators passed were null");
+        for(Narrator narrator : narrators){
+            requiresNotNull(narrator, "narrator was null");
+            this.narrators.add(narrator);
+        }
+        return this;
+    }
+
     public Agent clone(){
-        return new Agent(memory).setTools(tools);
+        return new Agent(memory).setTools(tools).setNarrators(narrators);
     }
 
     public <KEY> Agent askThe(final Agent anotherAgent, KEY key){

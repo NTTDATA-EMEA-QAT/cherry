@@ -1,5 +1,8 @@
 package io.magentys;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import static io.magentys.CoreMemory.coreMemory;
 
 
@@ -61,6 +64,15 @@ public class AgentProvider {
      */
     public AgentProvider withTools(Object... tools){
         anAgent = anAgent.clone().obtains(tools);
+        return this;
+    }
+
+    public AgentProvider withNarrators(Narrator... narrators){
+        Set<Narrator> narratorSet = new HashSet<Narrator>();
+        for(Narrator narrator : narrators){
+            narratorSet.add(narrator);
+        }
+        anAgent = anAgent.clone().setNarrators(narratorSet);
         return this;
     }
 
