@@ -44,7 +44,7 @@ public class Agent {
         return this;
     }
 
-    Agent setTools(List<Any> tools){
+    protected Agent setTools(List<Any> tools){
         this.tools = tools;
         return this;
     }
