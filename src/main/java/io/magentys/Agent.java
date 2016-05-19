@@ -5,11 +5,9 @@ import io.magentys.exceptions.NotAvailableException;
 import io.magentys.utils.Any;
 import io.magentys.utils.Clazz;
 import io.magentys.utils.Strings;
+import io.magentys.utils.UniqueId;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 import static io.magentys.utils.Any.any;
 import static io.magentys.utils.Requires.requires;
@@ -19,6 +17,17 @@ public class Agent {
 
     protected Memory memory;
     protected List<Any> tools = new ArrayList<Any>();
+
+    public String name() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    protected String name = UniqueId.incrementalId();
+
 
     public Set<Narrator> getNarrators() {
         return narrators;
@@ -30,7 +39,7 @@ public class Agent {
         this.memory = memory;
     }
 
-    protected void setMemory(final Memory mem) {
+    public void setMemory(final Memory mem) {
         this.memory = mem;
     }
 
@@ -57,13 +66,13 @@ public class Agent {
 
     public void narrateThat(String message){
         for(Narrator narrator : narrators) {
-            narrator.narrate("info", message);
+            narrator.narrate(name, "info", message);
         }
     }
 
     public void narrateThat(String level, String message){
         for(Narrator narrator : narrators){
-            narrator.narrate("info", message);
+            narrator.narrate(name, "info", message);
         }
     }
 

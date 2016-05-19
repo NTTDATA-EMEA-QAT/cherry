@@ -3,17 +3,14 @@ package io.magentys;
 import io.magentys.annotations.Narrate;
 import org.junit.Test;
 
-import static io.magentys.AgentProvider.agent;
+import static io.magentys.AgentProvider.provideAgent;
 import static io.magentys.narrators.SysoutNarrator.sysout;
 
-/**
- * Created by kostasmamalis on 19/05/16.
- */
 public class NarratorTest {
 
     @Test
     public void shouldNarrateSuccessfully() throws Exception {
-        Agent agent = agent();
+        Agent agent = provideAgent().called("immaculate").get();
         agent.addNarrators(sysout());
         final MyMission mission = new MyMission();
         agent.performs(mission);

@@ -5,6 +5,6 @@ package io.magentys;
  */
 public interface Narrator {
 
-    public void narrate(String level, String message);
+    public void narrate(String agentName, String level, String message);
 
 }

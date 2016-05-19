@@ -1,8 +1,6 @@
 package io.magentys.narrators;
 
 import io.magentys.Narrator;
-import org.joda.time.DateTime;
-import org.joda.time.LocalDate;
 import org.joda.time.LocalDateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
@@ -17,11 +15,12 @@ public class SysoutNarrator implements Narrator {
 
 
     @Override
-    public void narrate(String level, String message) {
+    public void narrate(String agentName, String level, String message) {
         requiresNotNull(level,"Level was null");
         DateTimeFormatter formatter = DateTimeFormat.forPattern("dd/MM/yyyy HH:mm:ss");
         LocalDateTime date = LocalDateTime.now();
         String timestamp = date.toString(formatter);
-        System.out.println(String.format("%s [%s]:\t%s", timestamp, level.toUpperCase(), message));
+        System.out.println(String.format("agent[%s] - %s [%s]:\t%s", agentName, timestamp, level.toUpperCase(), message));
     }
+
 }

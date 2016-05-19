@@ -46,6 +46,12 @@ public class AgentProvider {
         return new AgentProvider();
     }
 
+    public AgentProvider called(String name){
+       anAgent = anAgent.clone();
+       anAgent.setName(name);
+       return this;
+    }
+
     /**
      * Create a new agent with the memory provided
      * @param memory
