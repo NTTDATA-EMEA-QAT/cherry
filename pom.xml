@@ -3,7 +3,7 @@
 
     <groupId>io.magentys</groupId>
     <artifactId>cherry</artifactId>
-    <version>1.0.7-SNAPSHOT</version>
+    <version>1.0.7</version>
     <packaging>jar</packaging>
 
     <name>cherry</name>
@@ -29,7 +29,7 @@
     <scm>
         <developerConnection>scm:git:https://github.com/MagenTys/cherry</developerConnection>
         <url>https://github.com/MagenTys/cherry</url>
-        <tag>HEAD</tag>
+        <tag>cherry-1.0.7</tag>
     </scm>
 
     <distributionManagement>
