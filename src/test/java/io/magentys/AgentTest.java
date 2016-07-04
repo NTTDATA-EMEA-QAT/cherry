@@ -74,7 +74,7 @@ public class AgentTest {
     public void shouldAddSyntacticalSugar() throws Exception {
         final Agent Tom = agent();
         Tom.obtains(aPrinter(), and(aScanner()))
-                .andHe(scansThe("important Document"), and(printsTheDocument()));
+                .andHe(scansThe("important Document")).and(printsTheDocument());
 
 
     }

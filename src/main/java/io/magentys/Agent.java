@@ -129,17 +129,16 @@ public class Agent {
         return (VALUE) memory.recall(key, clazz);
     }
 
-    public Agent and(final Mission mission) {
-        performAll(mission);
-        return this;
+    public <T> T and(final Mission<T> mission) {
+        return mission.accomplishAs(this);
     }
 
-    public Agent andHe(final Mission... missions) {
-        return performAll(missions);
+    public <T> T andHe(final Mission<T> mission) {
+        return and(mission);
     }
 
-    public Agent andShe(final Mission... missions) {
-        return performAll(missions);
+    public <T> T andShe(final Mission<T> mission) {
+        return and(mission);
     }
 
 
