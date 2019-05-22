@@ -15,6 +15,6 @@ A fluent API framework...
           
 - Developers: [Kostas Mamalis](https://twitter.com/mamalisk)
 
-Powered by: [MagenTys](http://magentys.io)            
+Powered by: [NTT DATA](https://uk.nttdata.com/)
             
 
